@@ -13,6 +13,9 @@ const config: Config = {
         foreground: 'var(--foreground)',
         highlight: 'var(--highlight)',
       },
+      lineHeight: {
+        12: '3rem',
+      },
     },
   },
   plugins: [],

@@ -15,16 +15,19 @@ function NavBtn(prop: NavBtnProp) {
   return (
     <Link
       className={`
-        w-fit
+        inline-block
         px-4
+        w-fit
+        h-full
+        text-lg
         font-bold
-        leading-10
+        leading-12
         text-center
+        border-b-2
         border-transparent
         transition
-        duration-150
+        duration-200
         ease-in
-        hover:border-b-2
         hover:border-highlight
         ${pathname === href ? 'text-highlight' : ''}
       `}
@@ -40,14 +43,13 @@ export default function NavBar() {
     <nav
       className={`
         z-10
-        flex
         flex-row
         flex-nowrap
-        justify-start
-        px-2
-        h-10
+        flex
+        justify-center
+        w-full
+        h-12
         bg-white/20
-        rounded-md
         backdrop-blur-sm
       `}
     >

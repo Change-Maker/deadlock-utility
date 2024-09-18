@@ -22,7 +22,21 @@ body {
 }
 
 @layer utilities {
-  .text-balance {
-    text-wrap: balance;
+  .scrollbar::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  .scrollbar::-webkit-scrollbar-track {
+    background: #414868;
+  }
+
+  .scrollbar::-webkit-scrollbar-thumb {
+    background: #565f89;
+    border-radius: 100vh;
+    border: 3px solid #414868;
+  }
+
+  .scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #9aa5ce;
   }
 }

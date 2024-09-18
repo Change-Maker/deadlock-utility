@@ -29,12 +29,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased scrollbar`}
       >
-        <div className="container mx-auto fixed inset-x-0 top-5">
+        <div className="container fixed inset-0 max-w-full">
           <NavBar />
         </div>
-        <main className="container pt-20 mx-auto inset-x-0">{children}</main>
+        <main className="container pt-16 mx-auto">{children}</main>
       </body>
     </html>
   );
