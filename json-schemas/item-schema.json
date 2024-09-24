@@ -96,20 +96,48 @@
             "type": "array",
             "items": {
               "enum": [
-                "Ammo", "Bullet Damage", "Bullet Velocity", "Fire Rate", "Headshot",
+                "Ammo",
+                "Bullet Damage",
+                "Bullet Velocity",
+                "Fire Rate",
+                "Headshot",
                 "Reload Time",
 
-                "Bullet Lifesteal", "Bullet Resist", "Bullet Shield", "Debuff Resist", "Healing",
-                "Health", "Health Regen", "Spirit Lifesteal", "Spirit Resist", "Spirit Shield",
+                "Bullet Lifesteal",
+                "Bullet Resist",
+                "Bullet Shield",
+                "Debuff Resist",
+                "Healing",
+                "Health",
+                "Health Regen",
+                "Spirit Lifesteal",
+                "Spirit Resist",
+                "Spirit Shield",
 
-                "Ability Duration", "Ability Range", "Charged Ability", "Cooldown", "Spirit Damage",
+                "Ability Duration",
+                "Ability Range",
+                "Charged Ability",
+                "Cooldown",
+                "Spirit Damage",
                 "Spirit Power",
 
-                "Melee", "Melee Damage", "Movement Speed", "Non-lethal", "Stamina",
-                "Sprint Speed", "Negative Effect",
+                "Melee",
+                "Melee Damage",
+                "Movement Speed",
+                "Negative Effect",
+                "Non-lethal",
+                "Stamina",
+                "Sprint Speed",
 
-                "Bullet Slow", "Damage Penalty", "Disarm", "Fire Rate Slow", "Healing Reduction",
-                "Movement Slow", "Silence", "Sleep", "Stun"
+                "Bullet Slow",
+                "Damage Penalty",
+                "Disarm",
+                "Fire Rate Slow",
+                "Healing Reduction",
+                "Movement Slow",
+                "Silence",
+                "Sleep",
+                "Stun"
               ]
             }
           }
