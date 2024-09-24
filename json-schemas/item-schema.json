@@ -106,7 +106,7 @@
                 "Spirit Power",
 
                 "Melee", "Melee Damage", "Movement Speed", "Non-lethal", "Stamina",
-                "Sprint Speed",
+                "Sprint Speed", "Negative Effect",
 
                 "Bullet Slow", "Damage Penalty", "Disarm", "Fire Rate Slow", "Healing Reduction",
                 "Movement Slow", "Silence", "Sleep", "Stun"
