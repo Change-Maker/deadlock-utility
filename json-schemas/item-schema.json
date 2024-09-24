@@ -1,68 +1,68 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "Items Data Schema",
-  "description": "A schema for items data",
+  "description": "A schema for items data.",
   "type": "object",
   "properties": {
     "patch": {
-      "description": "The update version of this items data",
+      "description": "The update version of this items data.",
       "type": "string"
     },
     "category": {
-      "description": "The category of this items data",
+      "description": "The category of this items data.",
       "enum": ["Weapon", "Vitality", "Spirit"]
     },
     "color": {
-      "description": "The color of this category",
+      "description": "The color of this category.",
       "enum": ["#c97a03", "#659818", "#8b5614"]
     },
     "items": {
-      "description": "The items data in this category",
+      "description": "The items data in this category.",
       "type": "array",
       "items": {
         "type": "object",
         "properties": {
           "name": {
-            "description": "The name of this item",
+            "description": "The name of this item.",
             "type": "string"
           },
           "icon": {
-            "description": "A href to the icon of this item",
+            "description": "A href to the icon of this item.",
             "type": "string"
           },
           "price": {
-            "description": "The price of this item",
+            "description": "The price of this item.",
             "type": "integer"
           },
           "component": {
-            "description": "The component of this item",
+            "description": "The component of this item.",
             "type": ["string", "null"]
           },
           "isComponentOf": {
-            "description": "This item could be upgraded to which item",
+            "description": "This item could be upgraded to which item.",
             "type": "string"
           },
           "descs": {
-            "description": "The effects of this item",
+            "description": "The effects of this item.",
             "type": "array",
             "items": {
               "type": "string"
             }
           },
           "active": {
-            "description": "The active skill of this item",
+            "description": "The active skill of this item.",
             "type": ["object", "null"],
             "properties": {
               "cooldown": {
-                "description": "The cooldown of this skill",
+                "description": "The cooldown of this skill.",
                 "type": ["number", "null"]
               },
               "desc": {
-                "description": "The description of this skill",
+                "description": "The description of this skill.",
                 "type": "string"
               },
               "additionalDescs": {
-                "description": "The additional description of this skill",
+                "description": "The additional description of this skill.",
                 "type": "array",
                 "items": {
                   "type": "string"
@@ -71,19 +71,19 @@
             }
           },
           "passive": {
-            "description": "The passive skill of this item",
+            "description": "The passive skill of this item.",
             "type": ["object", "null"],
             "properties": {
               "cooldown": {
-                "description": "The cooldown of this skill in seconds",
+                "description": "The cooldown of this skill in seconds.",
                 "type": ["number", "null"]
               },
               "desc": {
-                "description": "The description of this skill",
+                "description": "The description of this skill.",
                 "type": "string"
               },
               "additionalDescs": {
-                "description": "The additional description of this skill",
+                "description": "The additional description of this skill.",
                 "type": "array",
                 "items": {
                   "type": "string"
@@ -92,7 +92,7 @@
             }
           },
           "tags": {
-            "description": "The tags of this item",
+            "description": "The tags of this item.",
             "type": "array",
             "items": {
               "enum": [
