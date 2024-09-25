@@ -40,7 +40,7 @@
           },
           "isComponentOf": {
             "description": "This item could be upgraded to which item.",
-            "type": "string"
+            "type": ["string", "null"]
           },
           "descs": {
             "description": "The effects of this item.",
@@ -114,10 +114,12 @@
                 "Spirit Resist",
                 "Spirit Shield",
 
+                "Active",
                 "Ability Duration",
                 "Ability Range",
                 "Charged Ability",
                 "Cooldown",
+                "Passive",
                 "Spirit Damage",
                 "Spirit Power",
 
