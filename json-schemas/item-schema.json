@@ -14,7 +14,7 @@
     },
     "color": {
       "description": "The color of this category.",
-      "enum": ["#c97a03", "#659818", "#8b5614"]
+      "enum": ["amber-500", "lime-500", "violet-600"]
     },
     "items": {
       "description": "The items data in this category.",
