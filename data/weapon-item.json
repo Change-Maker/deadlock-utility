@@ -1,0 +1,95 @@
+{
+  "$schema": "../json-schemas/item-schema.json",
+  "patch": "09-19-2024",
+  "category": "Weapon",
+  "items": [
+    {
+      "name": "Basic Magazine",
+      "icon": "https://deadlocked.wiki/images/5/54/Basic_Magazine.png",
+      "price": 500,
+      "component": null,
+      "isComponentOf": "Titanic Magazine",
+      "descs": [
+        "+24% Ammo",
+        "+15% Weapon Damage"
+      ],
+      "active": null,
+      "passive": null,
+      "tags": ["Ammo", "Bullet Damage"]
+    },
+    {
+      "name": "Close Quarters",
+      "icon": "https://deadlocked.wiki/images/4/43/Close_Quarters.png",
+      "price": 500,
+      "component": null,
+      "isComponentOf": "Point Blank",
+      "descs": [
+        "+85 Bullet Shield Health"
+      ],
+      "acive": null,
+      "passive": {
+        "cooldown": null,
+        "desc": "Deal additional Weapon Damage when in close range to your target.",
+        "additionalDescs": [
+          "+25% Weapon Damage",
+          "15m Close Range"
+        ]
+      },
+      "tags": ["Bullet Shield", "Bullet Damage"]
+    },
+    {
+      "name": "Point Blank",
+      "icon": "https://deadlocked.wiki/images/7/79/Point_Blank.png",
+      "price": 3500,
+      "component": "Close Quarters",
+      "isComponentOf": null,
+      "descs": [
+        "+15% Bullet Resist",
+        "+1 Stamina"
+      ],
+      "acive": null,
+      "passive": {
+        "cooldown": null,
+        "desc": "When in close range to your target, gain Weapon Damage and your bullets apply a Movement Slow.",
+        "additionalDescs": [
+          "+45% Weapon Damage",
+          "25% Movement Slow",
+          "2s Slow Duration",
+          "15m Close Range"
+        ]
+      },
+      "tags": ["Bullet Resist", "Stamina", "Bullet Damage", "Movement Slow", "Passive"]
+    },
+    {
+      "name": "Heroic Aura",
+      "icon": "https://deadlocked.wiki/images/6/60/Heroic_Aura.png",
+      "price": 3000,
+      "component": null,
+      "isComponentOf": null,
+      "descs": [
+        "+20% Bullet Lifesteal",
+        "+150 Bonus Health",
+        "+1m/s Move Speed"
+      ],
+      "active": {
+        "cooldown": 32,
+        "desc": "Provides bonus Movement Speed and Fire Rate to you and nearby allies.",
+        "additionalDescs": [
+          "+2m/s Movement Speed",
+          "+25% Fire Rate",
+          "30m Active Radius",
+          "6s Duration"
+        ]
+      },
+      "passive": {
+        "cooldown": null,
+        "desc": "Provides Fire Rate to nearby player minions.",
+        "additionalDescs": [
+          "+40% Minions Fire Rate",
+          "20m Radius"
+        ]
+      },
+      "tags": ["Bullet Lifesteal", "Health", "Movement Speed", "Fire Rate", "Active", "Passive"]
+    }
+  ]
+}

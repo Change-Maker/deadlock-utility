@@ -1,0 +1,146 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Items Data Schema",
+  "description": "A schema for items data.",
+  "type": "object",
+  "properties": {
+    "patch": {
+      "description": "The update version of this items data.",
+      "type": "string"
+    },
+    "category": {
+      "description": "The category of this items data.",
+      "enum": ["Weapon", "Vitality", "Spirit"]
+    },
+    "items": {
+      "description": "The items data in this category.",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "description": "The name of this item.",
+            "type": "string"
+          },
+          "icon": {
+            "description": "A href to the icon of this item.",
+            "type": "string"
+          },
+          "price": {
+            "description": "The price of this item.",
+            "type": "integer"
+          },
+          "component": {
+            "description": "The component of this item.",
+            "type": ["string", "null"]
+          },
+          "isComponentOf": {
+            "description": "This item could be upgraded to which item.",
+            "type": ["string", "null"]
+          },
+          "descs": {
+            "description": "The effects of this item.",
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "active": {
+            "description": "The active skill of this item.",
+            "type": ["object", "null"],
+            "properties": {
+              "cooldown": {
+                "description": "The cooldown of this skill.",
+                "type": ["number", "null"]
+              },
+              "desc": {
+                "description": "The description of this skill.",
+                "type": "string"
+              },
+              "additionalDescs": {
+                "description": "The additional description of this skill.",
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "passive": {
+            "description": "The passive skill of this item.",
+            "type": ["object", "null"],
+            "properties": {
+              "cooldown": {
+                "description": "The cooldown of this skill in seconds.",
+                "type": ["number", "null"]
+              },
+              "desc": {
+                "description": "The description of this skill.",
+                "type": "string"
+              },
+              "additionalDescs": {
+                "description": "The additional description of this skill.",
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "tags": {
+            "description": "The tags of this item.",
+            "type": "array",
+            "items": {
+              "enum": [
+                "Ammo",
+                "Bullet Damage",
+                "Bullet Velocity",
+                "Fire Rate",
+                "Headshot",
+                "Reload Time",
+
+                "Bullet Lifesteal",
+                "Bullet Resist",
+                "Bullet Shield",
+                "Debuff Resist",
+                "Healing",
+                "Health",
+                "Health Regen",
+                "Spirit Lifesteal",
+                "Spirit Resist",
+                "Spirit Shield",
+
+                "Active",
+                "Ability Duration",
+                "Ability Range",
+                "Charged Ability",
+                "Cooldown",
+                "Passive",
+                "Spirit Damage",
+                "Spirit Power",
+
+                "Melee",
+                "Melee Damage",
+                "Movement Speed",
+                "Negative Effect",
+                "Non-lethal",
+                "Stamina",
+                "Sprint Speed",
+
+                "Bullet Slow",
+                "Damage Penalty",
+                "Disarm",
+                "Fire Rate Slow",
+                "Healing Reduction",
+                "Movement Slow",
+                "Silence",
+                "Sleep",
+                "Stun"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

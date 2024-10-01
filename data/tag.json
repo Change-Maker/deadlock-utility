@@ -1,0 +1,52 @@
+{
+  "weaponTags": [
+    "Ammo",
+    "Bullet Damage",
+    "Bullet Velocity",
+    "Fire Rate",
+    "Headshot",
+    "Reload Time"
+  ],
+  "vitalityTags": [
+    "Bullet Lifesteal",
+    "Bullet Resist",
+    "Bullet Shield",
+    "Debuff Resist",
+    "Healing",
+    "Health",
+    "Health Regen",
+    "Spirit Lifesteal",
+    "Spirit Resist",
+    "Spirit Shield"
+  ],
+  "spiritTags": [
+    "Active",
+    "Ability Duration",
+    "Ability Range",
+    "Charged Ability",
+    "Cooldown",
+    "Passive",
+    "Spirit Damage",
+    "Spirit Power"
+  ],
+  "otherTags": [
+    "Melee",
+    "Melee Damage",
+    "Movement Speed",
+    "Negative Effect",
+    "Non-lethal",
+    "Stamina",
+    "Sprint Speed"
+  ],
+  "applyToEnemyTags": [
+    "Bullet Slow",
+    "Damage Penalty",
+    "Disarm",
+    "Fire Rate Slow",
+    "Healing Reduction",
+    "Movement Slow",
+    "Silence",
+    "Sleep",
+    "Stun"
+  ]
+}
