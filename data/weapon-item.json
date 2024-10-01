@@ -2,7 +2,6 @@
   "$schema": "../json-schemas/item-schema.json",
   "patch": "09-19-2024",
   "category": "Weapon",
-  "color": "amber-500",
   "items": [
     {
       "name": "Basic Magazine",
@@ -37,6 +36,29 @@
         ]
       },
       "tags": ["Bullet Shield", "Bullet Damage"]
+    },
+    {
+      "name": "Point Blank",
+      "icon": "https://deadlocked.wiki/images/7/79/Point_Blank.png",
+      "price": 3500,
+      "component": "Close Quarters",
+      "isComponentOf": null,
+      "descs": [
+        "+15% Bullet Resist",
+        "+1 Stamina"
+      ],
+      "acive": null,
+      "passive": {
+        "cooldown": null,
+        "desc": "When in close range to your target, gain Weapon Damage and your bullets apply a Movement Slow.",
+        "additionalDescs": [
+          "+45% Weapon Damage",
+          "25% Movement Slow",
+          "2s Slow Duration",
+          "15m Close Range"
+        ]
+      },
+      "tags": ["Bullet Resist", "Stamina", "Bullet Damage", "Movement Slow", "Passive"]
     },
     {
       "name": "Heroic Aura",

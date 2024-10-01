@@ -12,10 +12,6 @@
       "description": "The category of this items data.",
       "enum": ["Weapon", "Vitality", "Spirit"]
     },
-    "color": {
-      "description": "The color of this category.",
-      "enum": ["amber-500", "lime-500", "violet-600"]
-    },
     "items": {
       "description": "The items data in this category.",
       "type": "array",

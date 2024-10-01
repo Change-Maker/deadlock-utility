@@ -10,33 +10,41 @@ import {
 import { useMemo } from 'react';
 import Image from 'next/image';
 
+import tagJson from '@/data/tag.json';
 import weaponItemJson from '@/data/weapon-item.json';
 import { ItemData } from '@/types/item-type';
+
+function NameJSX(iconUrl: string, name: string) {
+  return (
+    <div className="flex-row flex-nowrap flex justify-start items-center h-10">
+      <Image
+        className="brightness-100 saturate-100 h-6 mr-1"
+        src={iconUrl}
+        width={24}
+        height={24}
+        alt={`${name}_icon`}
+      />
+      <div className="h-8">
+        {name}
+      </div>
+    </div>
+  );
+}
 
 const columnHelper = createColumnHelper<ItemData>();
 const columns = [
   columnHelper.accessor('price', {
+    id: 'price',
     header: 'Price',
     cell: (info) => info.getValue(),
   }),
   columnHelper.accessor('name', {
+    id: 'name',
     header: 'Name',
-    cell: ({ cell, row }) => (
-      <div className="flex-row flex-nowrap flex justify-start items-center h-10">
-        <Image
-          className="brightness-100 saturate-100 h-6 mr-1"
-          src={row.original.icon}
-          width={24}
-          height={24}
-          alt={`${cell.getValue()}_icon`}
-        />
-        <div className="h-8">
-          {cell.getValue()}
-        </div>
-      </div>
-    ),
+    cell: ({ cell, row }) => NameJSX(row.original.icon, cell.getValue()),
   }),
   columnHelper.accessor('descs', {
+    id: 'descs',
     header: 'Description',
     cell: (info) => (
       info.getValue().map((desc) => (
@@ -52,6 +60,7 @@ const columns = [
       }
     ),
     {
+      id: 'active-passive',
       header: 'Active/Passive',
       cell: (info) => (
         <div className="text-base max-w-96">
@@ -103,13 +112,70 @@ const columns = [
       ),
     },
   ),
+  columnHelper.accessor('tags', {
+    id: 'tags',
+    header: 'Tags',
+    cell: (info) => (
+      <div className="flex-wrap flex gap-1 text-sm max-w-52">
+        {info.getValue().map((tag) => {
+          let style = 'bg-slate-500';
+          if (tagJson.weaponTags.includes(tag)) {
+            style = 'bg-weapon';
+          } else if (tagJson.vitalityTags.includes(tag)) {
+            style = 'bg-vitality';
+          } else if (tagJson.spiritTags.includes(tag)) {
+            style = 'bg-spirit';
+          } else if (tagJson.otherTags.includes(tag)) {
+            style = 'bg-tag-other';
+          } else if (tagJson.applyToEnemyTags.includes(tag)) {
+            style = 'bg-tag-apply-to-enemy';
+          }
+          return (
+            <div
+              key={tag}
+              className={`
+                ${style}
+                px-1
+                text-background
+                rounded-md
+              `}
+            >
+              {tag}
+            </div>
+          );
+        })}
+      </div>
+    ),
+  }),
+  columnHelper.accessor('component', {
+    id: 'component',
+    header: 'Component',
+    cell: (info) => {
+      const target = weaponItemJson.items.find((item) => item.name === info.getValue());
+      if (target) {
+        return NameJSX(target.icon, target.name);
+      }
+      return null;
+    },
+  }),
+  columnHelper.accessor('isComponentOf', {
+    id: 'is-component-of',
+    header: () => <div className="text-xl">Is Component Of</div>,
+    cell: (info) => {
+      const target = weaponItemJson.items.find((item) => item.name === info.getValue());
+      if (target) {
+        return NameJSX(target.icon, target.name);
+      }
+      return null;
+    },
+  }),
 ];
 
 function ItemDataTable(
   { table, borderColor }: Readonly<{ table: Table<ItemData>, borderColor: string }>,
 ) {
   return (
-    <table>
+    <table className="mx-auto">
       <thead>
         {table.getHeaderGroups().map((headerGroup) => (
           <tr key={headerGroup.id}>
@@ -153,7 +219,7 @@ export function WeaponItemDataTable() {
   });
 
   return (
-    <ItemDataTable table={table} borderColor="border-amber-500/50" />
+    <ItemDataTable table={table} borderColor="border-weapon/50" />
   );
 }
 
