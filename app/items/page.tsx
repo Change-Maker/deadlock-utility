@@ -9,6 +9,7 @@ export default function Items() {
           rounded-md
           p-4
           mb-5
+          min-w-fit
           bg-amber-500/10
           outline
           outline-1
