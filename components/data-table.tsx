@@ -16,7 +16,7 @@ import { ItemData } from '@/types/item-type';
 
 function NameJSX(iconUrl: string, name: string) {
   return (
-    <div className="flex-row flex-nowrap flex justify-start items-center h-10">
+    <div className="flex-row flex-nowrap flex justify-start items-center h-10 min-w-32">
       <Image
         className="brightness-100 saturate-100 h-6 mr-1"
         src={iconUrl}
@@ -48,7 +48,7 @@ const columns = [
     header: 'Description',
     cell: (info) => (
       info.getValue().map((desc) => (
-        <div key={desc} className="text-lg">{desc}</div>
+        <div key={desc} className="text-base min-w-32">{desc}</div>
       ))
     ),
   }),
@@ -63,7 +63,7 @@ const columns = [
       id: 'active-passive',
       header: 'Active/Passive',
       cell: (info) => (
-        <div className="text-base max-w-96">
+        <div className="text-base min-w-52 max-w-96">
           {
             info.getValue().active
               ? (
@@ -160,7 +160,7 @@ const columns = [
   }),
   columnHelper.accessor('isComponentOf', {
     id: 'is-component-of',
-    header: () => <div className="text-xl">Is Component Of</div>,
+    header: () => <div className="text-lg">Is Component Of</div>,
     cell: (info) => {
       const target = weaponItemJson.items.find((item) => item.name === info.getValue());
       if (target) {
@@ -180,7 +180,7 @@ function ItemDataTable(
         {table.getHeaderGroups().map((headerGroup) => (
           <tr key={headerGroup.id}>
             {headerGroup.headers.map((header) => (
-              <th key={header.id} className="text-2xl py-2">
+              <th key={header.id} className="text-xl p-2">
                 {header.isPlaceholder
                   ? null
                   : flexRender(
@@ -196,7 +196,7 @@ function ItemDataTable(
         {table.getRowModel().rows.map((row) => (
           <tr key={row.id} className={`border-t ${borderColor}`}>
             {row.getVisibleCells().map((cell) => (
-              <td key={cell.id} className="text-xl px-3 py-2">
+              <td key={cell.id} className="text-lg px-3 py-5">
                 {flexRender(
                   cell.column.columnDef.cell,
                   cell.getContext(),
