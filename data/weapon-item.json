@@ -31,11 +31,450 @@
         "cooldown": null,
         "desc": "Deal additional Weapon Damage when in close range to your target.",
         "additionalDescs": [
-          "+25% Weapon Damage",
+          "+25% Weapon Damage (Conditional)",
           "15m Close Range"
         ]
       },
       "tags": ["Bullet Shield", "Bullet Damage"]
+    },
+    {
+      "name": "Headshot Booster",
+      "icon": "https://deadlocked.wiki/images/a/ac/Headshot_Booster.png",
+      "price": 500,
+      "component": null,
+      "isComponentOf": "Headhunter",
+      "descs": [
+        "+4% Fire Rate",
+        "+40 Bullet Shield Health"
+      ],
+      "active": null,
+      "passive": {
+        "cooldown": 7.5,
+        "desc": "Deal bonus Weapon Damage with headshots.",
+        "additionalDescs": [
+          "+40 Head Shot Bonus Damage"
+        ]
+      },
+      "tags": ["Fire Rate", "Bullet Shield", "Headshot", "Passive", "Passive Cooldown"]
+    },
+    {
+      "name": "High-Velocity Mag",
+      "icon": "https://deadlocked.wiki/images/6/6a/High-Velocity_Mag.png",
+      "price": 500,
+      "component": null,
+      "isComponentOf": "Pristine Emblem",
+      "descs": [
+        "+25% Bullet Velocity",
+        "+12% Weapon Damage",
+        "+50 Bullet Shield Health"
+      ],
+      "active": null,
+      "passive": null,
+      "tags": ["Bullet Velocity", "Bullet Damage", "Bullet Shield"]
+    },
+    {
+      "name": "Hollow Point Ward",
+      "icon": "https://deadlocked.wiki/images/7/73/Hollow_Point_Ward.png",
+      "price": 500,
+      "component": null,
+      "isComponentOf": null,
+      "descs": [
+        "+95 Spirit Shield Health",
+        "+4 Spirit Power"
+      ],
+      "active": null,
+      "passive": {
+        "cooldown": null,
+        "desc": "When you are above 60% health, deal additional Weapon Damage.",
+        "additionalDescs": [
+          "+22% Weapon Damage (Conditional)"
+        ]
+      },
+      "tags": ["Spirit Shield", "Spirit Power", "Passive", "Bullet Damage"]
+    },
+    {
+      "name": "Monster Rounds",
+      "icon": "https://deadlocked.wiki/images/f/f8/Monster_Rounds.png",
+      "price": 500,
+      "component": null,
+      "isComponentOf": null,
+      "descs": [
+        "+35% Weapon Damage vs. NPCs",
+        "+30% Bullet Resist vs. NPCs",
+        "+50 Bonus Health",
+        "+1 Health Regen"
+      ],
+      "active": null,
+      "passive": null,
+      "tags": ["Health", "Health Regen"]
+    },
+    {
+      "name": "Rapid Rounds",
+      "icon": "https://deadlocked.wiki/images/6/6e/Rapid_Rounds.png",
+      "price": 500,
+      "component": null,
+      "isComponentOf": null,
+      "descs": [
+        "+9% Fire Rate",
+        "+1m/s Sprint Speed"
+      ],
+      "active": null,
+      "passive": null,
+      "tags": ["Fire Rate", "Sprint Speed"]
+    },
+    {
+      "name": "Restorative Shot",
+      "icon": "https://deadlocked.wiki/images/4/4c/Restorative_Shot.png",
+      "price": 500,
+      "component": null,
+      "isComponentOf": null,
+      "descs": [
+        "+7% Bullet Resist",
+        "+8% Weapon Damage"
+      ],
+      "active": null,
+      "passive": {
+        "cooldown": 5.5,
+        "desc": "Your next bullet will heal you based on what target you hit.",
+        "additionalDescs": [
+          "40 Healing from Heroes",
+          "15 Healing from NPCs"
+        ]
+      },
+      "tags": ["Bullet Resist", "Bullet Damage", "Passive", "Passive Cooldown", "Healing"]
+    },
+    {
+      "name": "Active Reload",
+      "icon": "https://deadlocked.wiki/images/b/b4/Active_Reload.png",
+      "price": 1250,
+      "component": null,
+      "isComponentOf": null,
+      "descs": [
+        "+10% Weapon Damage",
+        "-20% Reload Time"
+      ],
+      "active": null,
+      "passive": {
+        "cooldown": 18,
+        "desc": "While reloading, pressing [R] during the highlighted portion will instantly finish your reload and grant you Fire Rate and Bullet Lifesteal.",
+        "additionalDescs": [
+          "+20% Fire Rate (Conditional)",
+          "+20% Bullet Lifesteal (Conditional)",
+          "7s Duration"
+        ]
+      },
+      "tags": ["Bullet Damage", "Reload Time", "Passive", "Passive Cooldown", "Fire Rate", "Bullet Lifesteal"]
+    },
+    {
+      "name": "Berserker",
+      "icon": "https://deadlocked.wiki/images/a/a8/Berserker.png",
+      "price": 1250,
+      "component": null,
+      "isComponentOf": null,
+      "descs": [
+        "+4 Ammo",
+        "+7% Bullet Resist"
+      ],
+      "active": null,
+      "passive": {
+        "cooldown": null,
+        "desc": "Your Weapon Damage increases as you take sustained damage.",
+        "additionalDescs": [
+          "+5% Weapon Damage per Stack",
+          "100 Damage taken to Stack",
+          "10 Max Stacks",
+          "10s Duration"
+        ]
+      },
+      "tags": ["Ammo", "Bullet Resist", "Passive", "Bullet Damage"]
+    },
+    {
+      "name": "Kinetic Dash",
+      "icon": "https://deadlocked.wiki/images/3/3e/Kinetic_Dash.png",
+      "price": 1250,
+      "component": null,
+      "isComponentOf": null,
+      "descs": [
+        "+100 Bonus Health",
+        "+1.5 Health Regen"
+      ],
+      "active": null,
+      "passive": {
+        "cooldown": 10.5,
+        "desc": "Your next Dash-Jump does not cost an extra stamina and you gain Fire Rate and bonus Ammo until your next reload. Lasts up to 7s.",
+        "additionalDescs": [
+          "+20% Fire Rate",
+          "+5 Temporary Ammo",
+          "7s Duration"
+        ]
+      },
+      "tags": ["Health", "Health Regen", "Passive", "Passive Cooldown", "Fire Rate", "Ammo"]
+    },
+    {
+      "name": "Long Range",
+      "icon": "https://deadlocked.wiki/images/0/0a/Long_Range.png",
+      "price": 1250,
+      "component": null,
+      "isComponentOf": "Sharpshooter",
+      "descs": [
+        "+20% Ammo",
+        "+140 Bullet Shield Health"
+      ],
+      "active": null,
+      "passive": {
+        "cooldown": null,
+        "desc": "Deal additional Weapon Damage when beyond a minimum distance from your target.",
+        "additionalDescs": [
+          "+40% Weapon Damage (Conditional)",
+          "15m Minimum Distance"
+        ]
+      },
+      "tags": ["Ammo", "Bullet Shield", "Passive", "Bullet Damage"]
+    },
+    {
+      "name": "Melee Charge",
+      "icon": "https://deadlocked.wiki/images/e/ea/Melee_Charge.png",
+      "price": 1250,
+      "component": null,
+      "isComponentOf": null,
+      "descs": [
+        "+15% Weapon Damage",
+        "+100 Bonus Health",
+        "+1 Health Regen",
+        "40% Heavy Melee Distance"
+      ],
+      "active": null,
+      "passive": {
+        "cooldown": 10,
+        "desc": "Your next Heavy Melee attack against an enemy deals increased damage and reloads your weapon weapon instantly.",
+        "additionalDescs": [
+          "+20% Bonus Heavy Melee Damage"
+        ]
+      },
+      "tags": ["Bullet Damage", "Health", "Health Regen", "Melee", "Passive", "Passive Cooldown", "Melee Damage"]
+    },
+    {
+      "name": "Mystic Shot",
+      "icon": "https://deadlocked.wiki/images/5/5a/Mystic_Shot.png",
+      "price": 1250,
+      "component": null,
+      "isComponentOf": null,
+      "descs": [
+        "+12% Weapon Damage",
+        "+4 Spirit Power"
+      ],
+      "active": null,
+      "passive": {
+        "cooldown": 5.2,
+        "desc": "Your next bullet deals bonus Spirit Damage.",
+        "additionalDescs": [
+          "65 + (0.8 * SpiritPower) Spirit Damage"
+        ]
+      },
+      "tags": ["Bullet Damage", "Spirit Power", "Passive", "Passive Cooldown", "Spirit Damage"]
+    },
+    {
+      "name": "Slowing Bullets",
+      "icon": "https://deadlocked.wiki/images/d/db/Slowing_Bullets.png",
+      "price": 1250,
+      "component": null,
+      "isComponentOf": "Silencer",
+      "descs": [
+        "+16% Weapon Damage",
+        "+5 Spirit Power"
+      ],
+      "active": null,
+      "passive": {
+        "cooldown": null,
+        "desc": "Your bullets apply Movement Slow.",
+        "additionalDescs": [
+          "25% Movement Slow (Conditional)",
+          "1.3s Slow Duration"
+        ]
+      },
+      "tags": ["Bullet Damage", "Spirit Power", "Passive", "Movement Slow"]
+    },
+    {
+      "name": "Soul Shredder Bullets",
+      "icon": "https://deadlocked.wiki/images/c/cb/Soul_Shredder_Bullets.png",
+      "price": 1250,
+      "component": null,
+      "isComponentOf": null,
+      "descs": [
+        "+7% Weapon Damage"
+      ],
+      "active": null,
+      "passive": {
+        "cooldown": null,
+        "desc": "Your Bullets apply a debuff that amplifies your Spirit Damage against the target and grants you Spirit Lifesteal against them.",
+        "additionalDescs": [
+          "10% Spirit Amp (Conditional)",
+          "+20% Lifesteal (Conditional)",
+          "6s Debuff Duration"
+        ]
+      },
+      "tags": ["Bullet Damage", "Passive", "Spirit Damage", "Spirit Lifesteal"]
+    },
+    {
+      "name": "Swift Striker",
+      "icon": "https://deadlocked.wiki/images/e/e4/Swift_Striker.png",
+      "price": 1250,
+      "component": null,
+      "isComponentOf": null,
+      "descs": [
+        "+22% Fire Rate",
+        "+10% Ammo",
+        "-5% Bullet Resist"
+      ],
+      "active": null,
+      "passive": null,
+      "tags": ["Fire Rate", "Ammo", "Negative Effect", "Bullet Resist"]
+    },
+    {
+      "name": "Fleetfoot",
+      "icon": "https://deadlocked.wiki/images/c/cf/Fleetfoot.png",
+      "price": 1250,
+      "component": null,
+      "isComponentOf": null,
+      "descs": [
+        "+90 Bonus Health",
+        "+25% Slide Distance"
+      ],
+      "active": {
+        "cooldown": 19,
+        "desc": "Gain bonus Movement Speed and Ammo.",
+        "additionalDescs": [
+          "+3m/s Movement Speed (Conditional)",
+          "+30% Temporary Ammo (Conditional)",
+          "4s Duration"
+        ]
+      },
+      "passive": {
+        "cooldown": null,
+        "desc": "Removes the Movement Speed penalty while shooting.",
+        "additionalDescs": []
+      },
+      "tags": ["Health", "Slide Distance", "Active", "Movement Speed", "Ammo", "Passive"]
+    },
+    {
+      "name": "Burst Fire",
+      "icon": "https://deadlocked.wiki/images/b/b0/Burst_Fire.png",
+      "price": 3000,
+      "component": null,
+      "isComponentOf": null,
+      "descs": [
+        "+12% Fire Rate",
+        "+50% Slide Distance",
+        "+70 Bonus Health"
+      ],
+      "active": null,
+      "passive": {
+        "cooldown": 8.5,
+        "desc": "Briefly gain Fire Rate and Move Speed when one of your bullets hits an enemy hero.",
+        "additionalDescs": [
+          "+30% Fire Rate (Conditional)",
+          "+2 m/s Move Speed (Conditional)",
+          "4s Duration"
+        ]
+      },
+      "tags": ["Fire Rate", "Slide Distance", "Health", "Passive", "Passive Cooldown", "Movement Speed"]
+    },
+    {
+      "name": "Escalating Resilience",
+      "icon": "https://deadlocked.wiki/images/5/57/Escalating_Resilience.png",
+      "price": 3000,
+      "component": null,
+      "isComponentOf": null,
+      "descs": [
+        "+14% Fire Rate",
+        "+14% Weapon Damage"
+      ],
+      "active": null,
+      "passive": {
+        "cooldown": null,
+        "desc": "Grants Bullet Resist when your bullets hit an enemy hero. Each shot can only grant one stack.",
+        "additionalDescs": [
+          "40% Max Bullet Resist",
+          "2% Bullet Resist per Stack",
+          "20s Stack Duration"
+        ]
+      },
+      "tags": ["Fire Rate", "Bullet Damage", "Passive", "Bullet Resist"]
+    },
+    {
+      "name": "Headhunter",
+      "icon": "https://deadlocked.wiki/images/0/06/Headhunter.png",
+      "price": 3500,
+      "component": "Headshot Booster",
+      "isComponentOf": null,
+      "descs": [
+        "+15% Weapon Damage",
+        "+150 Bullet Shield Health",
+        "+5% Fire Rate"
+      ],
+      "active": null,
+      "passive": {
+        "cooldown": 6,
+        "desc": "Landing a headshot deals bonus damage, heals you for a portion of your Max HP, and briefly grants you bonus move speed.",
+        "additionalDescs": [
+          "+140 Bonus Head Shot Damage",
+          "8% Heal per Headshot",
+          "+2 m/s Move Speed (Conditional)",
+          "3s Duration"
+        ]
+      },
+      "tags": [
+        "Bullet Damage",
+        "Bullet Shield",
+        "Fire Rate",
+        "Passive",
+        "Passive Cooldown",
+        "Headshot",
+        "Healing",
+        "Movement Speed"
+      ]
+    },
+    {
+      "name": "Hunter's Aura",
+      "icon": "https://deadlocked.wiki/images/0/08/Hunter%27s_Aura.png",
+      "price": 3000,
+      "component": null,
+      "isComponentOf": null,
+      "descs": [
+        "+150 Bonus Health"
+      ],
+      "active": null,
+      "passive": {
+        "cooldown": null,
+        "desc": "Reduces nearby enemies' Bullet Resist and Fire Rate. If there is only one enemy hero nearby, this effect is tripled.",
+        "additionalDescs": [
+          "-9% Bullet Resist (Conditional)",
+          "10% Fire Rate Slow (Conditional)",
+          "15m Radius"
+        ]
+      },
+      "tags": ["Health", "Passive", "Bullet Resist Reduction", "Fire Rate Slow"]
+    },
+    {
+      "name": "Intensifying Magazine",
+      "icon": "https://deadlocked.wiki/images/6/65/Intensifying_Magazine.png",
+      "price": 3000,
+      "component": null,
+      "isComponentOf": null,
+      "descs": [
+        "+25% Ammo",
+        "+20% Weapon Damage"
+      ],
+      "active": null,
+      "passive": {
+        "cooldown": null,
+        "desc": "Increases Weapon Damage as you continuously fire your weapon.",
+        "additionalDescs": [
+          "60% Max Weapon Damage (Conditional)",
+          "3s Time for Max Damage"
+        ]
+      },
+      "tags": ["Ammo", "Bullet Damage", "Passive"]
     },
     {
       "name": "Point Blank",
@@ -59,6 +498,136 @@
         ]
       },
       "tags": ["Bullet Resist", "Stamina", "Bullet Damage", "Movement Slow", "Passive"]
+    },
+    {
+      "name": "Pristine Emblem",
+      "icon": "https://deadlocked.wiki/images/2/26/Pristine_Emblem.png",
+      "price": 3500,
+      "component": "High-Velocity Mag",
+      "isComponentOf": null,
+      "descs": [
+        "+25% Weapon Damage",
+        "+12 Spirit Power",
+        "+12% Spirit Resist",
+        "+35% Bullet Velocity"
+      ],
+      "active": null,
+      "passive": {
+        "cooldown": null,
+        "desc": "Your attacks have additional Weapon Damage against enemies above 50% health.",
+        "additionalDescs": [
+          "+25% Weapon Damage (Conditional)"
+        ]
+      },
+      "tags": ["Bullet Damage", "Spirit Power", "Spirit Resist", "Bullet Velocity", "Passive"]
+    },
+    {
+      "name": "Sharpshooter",
+      "icon": "https://deadlocked.wiki/images/2/25/Sharpshooter.png",
+      "price": 4250,
+      "component": "Long Range",
+      "isComponentOf": null,
+      "descs": [
+        "+20% Ammo",
+        "+15% Weapon Fall-off Range",
+        "+30% Weapon Zoom",
+        "+200 Bullet Shield Health"
+      ],
+      "active": null,
+      "passive": {
+        "cooldown": null,
+        "desc": "Deal additional Weapon Damage when beyond a minimum distance from your target.",
+        "additionalDescs": [
+          "+70% Weapon Damage",
+          "15 Min. Distance"
+        ]
+      },
+      "tags": ["Ammo", "Bullet Shield", "Passive", "Bullet Damage"]
+    },
+    {
+      "name": "Tesla Bullets",
+      "icon": "https://deadlocked.wiki/images/5/56/Tesla_Bullets.png",
+      "price": 3000,
+      "component": null,
+      "isComponentOf": null,
+      "descs": [
+        "+14% Fire Rate"
+      ],
+      "active": null,
+      "passive": {
+        "cooldown": null,
+        "desc": "Your bullets have a chance to shock your target. The shock will jump to a nearby enemy.",
+        "additionalDescs": [
+          "30 + (0.13 * SpiritPower) Shock Damage",
+          "60 + (0.2 * SpiritPower) Damage on Jump",
+          "25% Proc Chance",
+          "8m Jump Radius",
+          "2 Max Jumps"
+        ]
+      },
+      "tags": ["Fire Rate", "Passive", "Spirit Damage"]
+    },
+    {
+      "name": "Titanic Magazine",
+      "icon": "https://deadlocked.wiki/images/d/d8/Titanic_Magazine.png",
+      "price": 3500,
+      "component": "Basic Magazine",
+      "isComponentOf": null,
+      "descs": [
+        "+120% Ammo",
+        "+18% Weapon Damage",
+        "+18% Bullet Resist"
+      ],
+      "active": null,
+      "passive": null,
+      "tags": ["Ammo", "Bullet Damage", "Bullet Resist"]
+    },
+    {
+      "name": "Toxic Bullets",
+      "icon": "https://deadlocked.wiki/images/f/f0/Toxic_Bullets.png",
+      "price": 3000,
+      "component": null,
+      "isComponentOf": null,
+      "descs": [
+        "+100 Bonus Health"
+      ],
+      "active": null,
+      "passive": {
+        "cooldown": null,
+        "desc": "Your bullets build up a Bleed on enemies, causing them to lose a percentage of their current health over time. Also applies Healing Reduction on the bleeding target.",
+        "additionalDescs": [
+          "5%/sec Bleed Damage",
+          "-65% Healing Reduction",
+          "3s Duration",
+          "0.8% Buildup Per Shot"
+        ]
+      },
+      "tags": ["Health", "Passive", "Healing Reduction"]
+    },
+    {
+      "name": "Alchemical Fire",
+      "icon": "https://deadlocked.wiki/images/f/fc/Alchemical_Fire.png",
+      "price": 3000,
+      "component": null,
+      "isComponentOf": null,
+      "descs": [
+        "+225 Bullet Shield Health",
+        "+14% Weapon Damage",
+        "+11 Spirit Power"
+      ],
+      "active": {
+        "cooldown": 28,
+        "desc": "Throw a flask that explodes on contact, creating an area that does increasing Spirit Damage per second and causes enemies to receive additional Weapon Damage from your team. Deals 40% less DPS vs non-heroes.",
+        "additionalDescs": [
+          "45 DPS",
+          "+50% Weapon Damage (Conditional)",
+          "97 Max DPS",
+          "10m Radius",
+          "5s Duration"
+        ]
+      },
+      "passive": null,
+      "tags": ["Bullet Shield", "Bullet Damage", "Spirit Power", "Active", "Spirit Damage"]
     },
     {
       "name": "Heroic Aura",
@@ -90,6 +659,244 @@
         ]
       },
       "tags": ["Bullet Lifesteal", "Health", "Movement Speed", "Fire Rate", "Active", "Passive"]
+    },
+    {
+      "name": "Warp Stone",
+      "icon": "https://deadlocked.wiki/images/4/4f/Warp_Stone.png",
+      "price": 3000,
+      "component": null,
+      "isComponentOf": null,
+      "descs": [
+        "+20% Weapon Damage",
+        "+8 Spirit Power"
+      ],
+      "active": {
+        "cooldown": 16,
+        "desc": "Teleport straight ahead, gaining Bullet Resist.",
+        "additionalDescs": [
+          "11m Teleport Range",
+          "+30% Bullet Resist (Conditional)",
+          "5s Buff Duration"
+        ]
+      },
+      "passive": null,
+      "tags": ["Bullet Damage", "Spirit Power", "Active", "Bullet Resist"]
+    },
+    {
+      "name": "Crippling Headshot",
+      "icon": "https://deadlocked.wiki/images/6/6c/Crippling_Headshot.png",
+      "price": 6200,
+      "component": null,
+      "isComponentOf": null,
+      "descs": [
+        "+20% Weapon Damage",
+        "+10% Bullet Lifesteal",
+        "+10% Spirit Lifesteal"
+      ],
+      "active": null,
+      "passive": {
+        "cooldown": null,
+        "desc": "Headshots reduce target's Bullet and Spirit Resist.",
+        "additionalDescs": [
+          "24% Bullet Resist Reduction",
+          "24% Spirit Resist Reduction",
+          "4s Debuff Duration"
+        ]
+      },
+      "tags": [
+        "Bullet Damage",
+        "Bullet Lifesteal",
+        "Spirit Lifesteal",
+        "Passive",
+        "Headshot",
+        "Bullet Resist Reduction",
+        "Spirit Resist Reduction"
+      ]
+    },
+    {
+      "name": "Frenzy",
+      "icon": "https://deadlocked.wiki/images/f/f1/Frenzy.png",
+      "price": 6200,
+      "component": null,
+      "isComponentOf": null,
+      "descs": [
+        "+12 Ammo",
+        "+30% Weapon Damage",
+        "+200 Bonus Health"
+      ],
+      "active": null,
+      "passive": {
+        "cooldown": null,
+        "desc": "While you are below 40% health, you gain stat bonuses.",
+        "additionalDescs": [
+          "4 m/s Movement Speed (Conditional)",
+          "40% Fire Rate (Conditional)",
+          "45% Bullet Resist (Conditional)"
+        ]
+      },
+      "tags": ["Ammo", "Bullet Damage", "Health", "Passive", "Movement Speed", "Fire Rate", "Bullet Resist"]
+    },
+    {
+      "name": "Glass Cannon",
+      "icon": "https://deadlocked.wiki/images/6/6e/Glass_Cannon.png",
+      "price": 6200,
+      "component": null,
+      "isComponentOf": null,
+      "descs": [
+        "+70% Weapon Damage",
+        "+10% Fire Rate",
+        "+1m/s Move Speed",
+        "-15% Max Health"
+      ],
+      "active": null,
+      "passive": {
+        "cooldown": null,
+        "desc": "Each hero kill grants permanent Weapon Damage (up to a max of 7 times). Death results in loss of 1 stack.",
+        "additionalDescs": [
+          "+10% Weapon Damage per Kill (Conditional)"
+        ]
+      },
+      "tags": ["Bullet Damage", "Fire Rate", "Movement Speed", "Negative Effect", "Health", "Passive"]
+    },
+    {
+      "name": "Lucky Shot",
+      "icon": "https://deadlocked.wiki/images/0/06/Lucky_Shot.png",
+      "price": 6200,
+      "component": null,
+      "isComponentOf": null,
+      "descs": [
+        "+30% Ammo"
+      ],
+      "active": null,
+      "passive": {
+        "cooldown": null,
+        "desc": "Your bullets have a chance to be empowered, causing them to deal bonus damage and Slow on hit.",
+        "additionalDescs": [
+          "35% Proc Chance",
+          "90% Bonus Damage",
+          "30% Movement Slow (Conditional)",
+          "1.5s Slow Duration"
+        ]
+      },
+      "tags": ["Ammo", "Passive", "Bullet Damage", "Movement Slow"]
+    },
+    {
+      "name": "Ricochet",
+      "icon": "https://deadlocked.wiki/images/8/87/Ricochet.png",
+      "price": 6200,
+      "component": null,
+      "isComponentOf": null,
+      "descs": [
+        "+35% Ammo",
+        "+10% Fire Rate",
+        "+150 Bonus Health"
+      ],
+      "active": null,
+      "passive": {
+        "cooldown": null,
+        "desc": "Your bullets will ricochet on enemies near your target, applying any bullet procs and dealing a percentage of the original damage.",
+        "additionalDescs": [
+          "60% Ricochet Damage",
+          "2 Ricochet Targets",
+          "14m Ricochet Range"
+        ]
+      },
+      "tags": ["Ammo", "Fire Rate", "Health", "Passive"]
+    },
+    {
+      "name": "Spiritual Overflow",
+      "icon": "https://deadlocked.wiki/images/4/46/Spiritual_Overflow.png",
+      "price": 6200,
+      "component": null,
+      "isComponentOf": null,
+      "descs": [
+        "+20% Fire Rate",
+        "+15% Cooldown Reduction",
+        "+10% Spirit Lifesteal",
+        "+250 Bullet Shield Health"
+      ],
+      "active": null,
+      "passive": {
+        "cooldown": null,
+        "desc": "Gain bonus Spirit Power by charging up with your bullets on enemy heroes.",
+        "additionalDescs": [
+          "+45 Spirit Power (Conditional)",
+          "0.8% Buildup Per Shot",
+          "18s Duration"
+        ]
+      },
+      "tags": ["Fire Rate", "Cooldown Reduction", "Spirit Lifesteal", "Bullet Shield", "Passive", "Spirit Power"]
+    },
+    {
+      "name": "Shadow Weave",
+      "icon": "https://deadlocked.wiki/images/4/4e/Shadow_Weave.png",
+      "price": 6200,
+      "component": null,
+      "isComponentOf": null,
+      "descs": [
+        "+15 Health Regen",
+        "+300 Spirit Shield Health",
+        "+30% Ammo"
+      ],
+      "active": {
+        "cooldown": 48,
+        "desc": "Become Stealthed. Whenever you take damage while Stealthed you get briefly revealed.\nAttacking or using an ability will end your stealth and start an ambush, temporarily granting you bonus Fire Rate and Spirit Power",
+        "additionalDescs": [
+          "Invisible Status Effect",
+          "25s Stealth Duration",
+          "18m Spot Radius",
+          "+40% Ambush Fire Rate (Conditional)",
+          "+55 Ambush Spirit Power (Conditional) 8s Ambush Duration"
+        ]
+      },
+      "passive": null,
+      "tags": ["Health", "Spirit Shield", "Ammo", "Active", "Fire Rate", "Spirit Power"]
+    },
+    {
+      "name": "Silencer",
+      "icon": "https://deadlocked.wiki/images/4/43/Silencer.png",
+      "price": 7450,
+      "component": "Slowing Bullets",
+      "isComponentOf": null,
+      "descs": [
+        "+25% Bullet Slow Proc",
+        "+20% Weapon Damage",
+        "+12 Spirit Power"
+      ],
+      "active": {
+        "cooldown": 36,
+        "desc": "For the next 4s, all your bullets immediately apply Silence. Silence prevents targets from using abilities.",
+        "additionalDescs": [
+          "Silenced Status Effect",
+          "2s Debuff Duration"
+        ]
+      },
+      "passive": null,
+      "tags": ["Movement Slow", "Bullet Damage", "Spirit Power", "Active", "Silence"]
+    },
+    {
+      "name": "Vampiric Burst",
+      "icon": "https://deadlocked.wiki/images/d/dc/Vampiric_Burst.png",
+      "price": 6200,
+      "component": null,
+      "isComponentOf": null,
+      "descs": [
+        "2m/s Move Speed",
+        "+25% Weapon Damage",
+        "+150 Bonus Health"
+      ],
+      "active": {
+        "cooldown": 37,
+        "desc": "Grants Lifesteal, Fire Rate, and Ammo. This added Ammo is not limited by your max magazine size.",
+        "additionalDescs": [
+          "100% Bullet Lifesteal",
+          "40% Fire Rate",
+          "50% Ammo",
+          "4.5s Duration"
+        ]
+      },
+      "passive": null,
+      "tags": ["Movement Speed", "Bullet Damage", "Health", "Active", "Bullet Lifesteal", "Fire Rate", "Ammo"]
     }
   ]
 }

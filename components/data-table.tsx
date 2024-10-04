@@ -16,15 +16,15 @@ import { ItemData } from '@/types/item-type';
 
 function NameJSX(iconUrl: string, name: string) {
   return (
-    <div className="flex-row flex-nowrap flex justify-start items-center h-10 min-w-32">
+    <div className="flex-row flex-nowrap flex justify-start items-center min-w-32">
       <Image
-        className="brightness-100 saturate-100 h-6 mr-1"
+        className="brightness-0 saturate-100 invert mr-1"
         src={iconUrl}
         width={24}
         height={24}
         alt={`${name}_icon`}
       />
-      <div className="h-8">
+      <div>
         {name}
       </div>
     </div>
@@ -48,7 +48,7 @@ const columns = [
     header: 'Description',
     cell: (info) => (
       info.getValue().map((desc) => (
-        <div key={desc} className="text-base min-w-32">{desc}</div>
+        <div key={desc} className="min-w-32">{desc}</div>
       ))
     ),
   }),
@@ -63,7 +63,7 @@ const columns = [
       id: 'active-passive',
       header: 'Active/Passive',
       cell: (info) => (
-        <div className="text-base min-w-52 max-w-96">
+        <div className="min-w-52 max-w-80">
           {
             info.getValue().active
               ? (
@@ -77,7 +77,7 @@ const columns = [
                     }
                   </div>
                   <div className="pl-2">
-                    <div>{info.getValue().active?.desc}</div>
+                    <div className="whitespace-pre-line">{info.getValue().active?.desc}</div>
                     {info.getValue().active?.additionalDescs.map((desc) => (
                       <div key={desc}>{desc}</div>
                     ))}
@@ -99,7 +99,7 @@ const columns = [
                     }
                   </div>
                   <div className="pl-2">
-                    <div>{info.getValue().passive?.desc}</div>
+                    <div className="whitespace-pre-line">{info.getValue().passive?.desc}</div>
                     {info.getValue().passive?.additionalDescs.map((desc) => (
                       <div key={desc}>{desc}</div>
                     ))}
@@ -116,7 +116,7 @@ const columns = [
     id: 'tags',
     header: 'Tags',
     cell: (info) => (
-      <div className="flex-wrap flex gap-1 text-sm max-w-52">
+      <div className="flex-wrap flex gap-1 text-sm max-w-40">
         {info.getValue().map((tag) => {
           let style = 'bg-slate-500';
           if (tagJson.weaponTags.includes(tag)) {
@@ -127,6 +127,8 @@ const columns = [
             style = 'bg-spirit';
           } else if (tagJson.otherTags.includes(tag)) {
             style = 'bg-tag-other';
+          } else if (tagJson.negtiveEffectTags.includes(tag)) {
+            style = 'bg-tag-negtive-effect';
           } else if (tagJson.applyToEnemyTags.includes(tag)) {
             style = 'bg-tag-apply-to-enemy';
           }
@@ -176,11 +178,11 @@ function ItemDataTable(
 ) {
   return (
     <table className="mx-auto">
-      <thead>
+      <thead className="text-xl">
         {table.getHeaderGroups().map((headerGroup) => (
           <tr key={headerGroup.id}>
             {headerGroup.headers.map((header) => (
-              <th key={header.id} className="text-xl p-2">
+              <th key={header.id} className="p-2">
                 {header.isPlaceholder
                   ? null
                   : flexRender(
@@ -192,11 +194,11 @@ function ItemDataTable(
           </tr>
         ))}
       </thead>
-      <tbody className={`border-t-2 ${borderColor}`}>
+      <tbody className={`text-base border-t-2 ${borderColor}`}>
         {table.getRowModel().rows.map((row) => (
           <tr key={row.id} className={`border-t ${borderColor}`}>
             {row.getVisibleCells().map((cell) => (
-              <td key={cell.id} className="text-lg px-3 py-5">
+              <td key={cell.id} className="px-3 py-5">
                 {flexRender(
                   cell.column.columnDef.cell,
                   cell.getContext(),
