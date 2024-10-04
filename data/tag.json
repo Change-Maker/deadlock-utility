@@ -24,8 +24,9 @@
     "Ability Duration",
     "Ability Range",
     "Charged Ability",
-    "Cooldown",
+    "Cooldown Reduction",
     "Passive",
+    "Passive Cooldown",
     "Spirit Damage",
     "Spirit Power"
   ],
@@ -33,12 +34,16 @@
     "Melee",
     "Melee Damage",
     "Movement Speed",
-    "Negative Effect",
     "Non-lethal",
+    "Slide Distance",
     "Stamina",
     "Sprint Speed"
   ],
+  "negtiveEffectTags": [
+    "Negative Effect"
+  ],
   "applyToEnemyTags": [
+    "Bullet Resist Reduction",
     "Bullet Slow",
     "Damage Penalty",
     "Disarm",
@@ -47,6 +52,7 @@
     "Movement Slow",
     "Silence",
     "Sleep",
+    "Spirit Resist Reduction",
     "Stun"
   ]
 }

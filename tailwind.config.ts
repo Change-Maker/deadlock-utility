@@ -16,8 +16,9 @@ const config: Config = {
         weapon: colors.amber[500],
         vitality: colors.lime[500],
         spirit: colors.violet[500],
-        'tag-other': colors.sky[500],
-        'tag-apply-to-enemy': colors.rose[500],
+        'tag-other': colors.slate[400],
+        'tag-negtive-effect': colors.red[600],
+        'tag-apply-to-enemy': colors.cyan[400],
       },
       lineHeight: {
         12: '3rem',
