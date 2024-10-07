@@ -167,28 +167,48 @@ const columns = [
       </div>
     ),
   }),
-  columnHelper.accessor('component', {
-    id: 'component',
-    header: 'Component',
-    cell: (info) => {
-      const target = weaponItemJson.items.find((item) => item.name === info.getValue());
-      if (target) {
-        return NameJSX(target.icon, target.name);
-      }
-      return null;
+  columnHelper.accessor(
+    (row) => ({ component: row.component, isComponentOf: row.isComponentOf }),
+    {
+      id: 'notes',
+      header: 'Notes',
+      cell: (info) => {
+        if (info.getValue().component || info.getValue().isComponentOf) {
+          const component = weaponItemJson.items.find(
+            (item) => item.name === info.getValue().component,
+          );
+          const isComponentOf = weaponItemJson.items.find(
+            (item) => item.name === info.getValue().isComponentOf,
+          );
+          return (
+            <div>
+              {
+                component
+                  ? (
+                    <div>
+                      <div className="font-bold">Component</div>
+                      <div className="pl-2">{NameJSX(component.icon, component.name)}</div>
+                    </div>
+                  )
+                  : null
+              }
+              {
+                isComponentOf
+                  ? (
+                    <div>
+                      <div className="font-bold">Is Component Of</div>
+                      <div className="pl-2">{NameJSX(isComponentOf.icon, isComponentOf.name)}</div>
+                    </div>
+                  )
+                  : null
+              }
+            </div>
+          );
+        }
+        return null;
+      },
     },
-  }),
-  columnHelper.accessor('isComponentOf', {
-    id: 'is-component-of',
-    header: () => <div className="text-lg">Is Component Of</div>,
-    cell: (info) => {
-      const target = weaponItemJson.items.find((item) => item.name === info.getValue());
-      if (target) {
-        return NameJSX(target.icon, target.name);
-      }
-      return null;
-    },
-  }),
+  ),
 ];
 
 function ItemDataTable(
