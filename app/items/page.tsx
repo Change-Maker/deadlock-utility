@@ -10,10 +10,10 @@ export default function Items() {
           p-4
           mb-5
           min-w-fit
-          bg-amber-500/10
+          bg-weapon/10
           outline
           outline-1
-          outline-amber-500
+          outline-weapon
           outline-offset-2
         `}
       >
