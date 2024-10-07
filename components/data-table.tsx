@@ -48,16 +48,19 @@ function PriceJSX(price: number) {
 
 const columnHelper = createColumnHelper<ItemData>();
 const columns = [
-  columnHelper.accessor('name', {
-    id: 'price-name',
-    header: 'Price&Name',
-    cell: ({ cell, row }) => (
-      <div className="flex-col flex-nowrap flex">
-        {PriceJSX(row.original.price)}
-        {NameJSX(row.original.icon, cell.getValue())}
-      </div>
-    ),
-  }),
+  columnHelper.accessor(
+    (row) => ({ price: row.price, icon: row.icon, name: row.name }),
+    {
+      id: 'price-name',
+      header: 'Price&Name',
+      cell: (info) => (
+        <div className="flex-col flex-nowrap flex">
+          {PriceJSX(info.getValue().price)}
+          {NameJSX(info.getValue().icon, info.getValue().name)}
+        </div>
+      ),
+    },
+  ),
   columnHelper.accessor('descs', {
     id: 'descs',
     header: 'Description',
