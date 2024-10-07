@@ -36,7 +36,7 @@ function PriceJSX(price: number) {
     <div className="flex-row flex-nowrap flex justify-start items-center">
       <Image
         className="mr-1"
-        src="https://deadlocked.wiki/images/thumb/e/e3/Souls_iconColored.png/13px-Souls_iconColored.png"
+        src="https://deadlocked.wiki/images/thumb/e/e3/Souls_iconColored.png/26px-Souls_iconColored.png"
         height={10}
         width={10}
         alt="souls_icon"
