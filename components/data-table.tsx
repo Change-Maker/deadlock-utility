@@ -20,8 +20,8 @@ function NameJSX(iconUrl: string, name: string) {
       <Image
         className="brightness-0 saturate-100 invert mr-1"
         src={iconUrl}
-        width={24}
-        height={24}
+        width={20}
+        height={20}
         alt={`${name}_icon`}
       />
       <div>
@@ -81,7 +81,7 @@ const columns = [
       id: 'active-passive',
       header: 'Active/Passive',
       cell: (info) => (
-        <div className="min-w-52 max-w-80">
+        <div className="min-w-80 max-w-96">
           {
             info.getValue().active
               ? (
@@ -134,7 +134,7 @@ const columns = [
     id: 'tags',
     header: 'Tags',
     cell: (info) => (
-      <div className="flex-wrap flex gap-1 text-sm max-w-40">
+      <div className="flex-wrap flex gap-1 text-sm w-40">
         {info.getValue().map((tag) => {
           let style = 'bg-slate-500';
           if (tagJson.weaponTags.includes(tag)) {
