@@ -52,7 +52,7 @@ const columns = [
     (row) => ({ price: row.price, icon: row.icon, name: row.name }),
     {
       id: 'price-name',
-      header: 'Price&Name',
+      header: 'Price & Name',
       cell: (info) => (
         <div className="flex-col flex-nowrap flex">
           {PriceJSX(info.getValue().price)}
