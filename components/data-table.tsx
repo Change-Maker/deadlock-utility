@@ -31,17 +31,32 @@ function NameJSX(iconUrl: string, name: string) {
   );
 }
 
+function PriceJSX(price: number) {
+  return (
+    <div className="flex-row flex-nowrap flex justify-start items-center">
+      <Image
+        className="mr-1"
+        src="https://deadlocked.wiki/images/thumb/e/e3/Souls_iconColored.png/13px-Souls_iconColored.png"
+        height={10}
+        width={10}
+        alt="souls_icon"
+      />
+      <div>{price}</div>
+    </div>
+  );
+}
+
 const columnHelper = createColumnHelper<ItemData>();
 const columns = [
-  columnHelper.accessor('price', {
-    id: 'price',
-    header: 'Price',
-    cell: (info) => info.getValue(),
-  }),
   columnHelper.accessor('name', {
-    id: 'name',
-    header: 'Name',
-    cell: ({ cell, row }) => NameJSX(row.original.icon, cell.getValue()),
+    id: 'price-name',
+    header: 'Price&Name',
+    cell: ({ cell, row }) => (
+      <div className="flex-col flex-nowrap flex">
+        {PriceJSX(row.original.price)}
+        {NameJSX(row.original.icon, cell.getValue())}
+      </div>
+    ),
   }),
   columnHelper.accessor('descs', {
     id: 'descs',
