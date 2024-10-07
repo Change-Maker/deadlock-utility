@@ -20,8 +20,8 @@ function NameJSX(iconUrl: string, name: string) {
       <Image
         className="brightness-0 saturate-100 invert mr-1"
         src={iconUrl}
-        width={24}
-        height={24}
+        width={20}
+        height={20}
         alt={`${name}_icon`}
       />
       <div>
@@ -31,18 +31,36 @@ function NameJSX(iconUrl: string, name: string) {
   );
 }
 
+function PriceJSX(price: number) {
+  return (
+    <div className="flex-row flex-nowrap flex justify-start items-center">
+      <Image
+        className="mr-1"
+        src="https://deadlocked.wiki/images/thumb/e/e3/Souls_iconColored.png/13px-Souls_iconColored.png"
+        height={10}
+        width={10}
+        alt="souls_icon"
+      />
+      <div>{price}</div>
+    </div>
+  );
+}
+
 const columnHelper = createColumnHelper<ItemData>();
 const columns = [
-  columnHelper.accessor('price', {
-    id: 'price',
-    header: 'Price',
-    cell: (info) => info.getValue(),
-  }),
-  columnHelper.accessor('name', {
-    id: 'name',
-    header: 'Name',
-    cell: ({ cell, row }) => NameJSX(row.original.icon, cell.getValue()),
-  }),
+  columnHelper.accessor(
+    (row) => ({ price: row.price, icon: row.icon, name: row.name }),
+    {
+      id: 'price-name',
+      header: 'Price&Name',
+      cell: (info) => (
+        <div className="flex-col flex-nowrap flex">
+          {PriceJSX(info.getValue().price)}
+          {NameJSX(info.getValue().icon, info.getValue().name)}
+        </div>
+      ),
+    },
+  ),
   columnHelper.accessor('descs', {
     id: 'descs',
     header: 'Description',
@@ -63,7 +81,7 @@ const columns = [
       id: 'active-passive',
       header: 'Active/Passive',
       cell: (info) => (
-        <div className="min-w-52 max-w-80">
+        <div className="min-w-80 max-w-96">
           {
             info.getValue().active
               ? (
@@ -116,7 +134,7 @@ const columns = [
     id: 'tags',
     header: 'Tags',
     cell: (info) => (
-      <div className="flex-wrap flex gap-1 text-sm max-w-40">
+      <div className="flex-wrap flex gap-1 text-sm w-40">
         {info.getValue().map((tag) => {
           let style = 'bg-slate-500';
           if (tagJson.weaponTags.includes(tag)) {
@@ -149,28 +167,48 @@ const columns = [
       </div>
     ),
   }),
-  columnHelper.accessor('component', {
-    id: 'component',
-    header: 'Component',
-    cell: (info) => {
-      const target = weaponItemJson.items.find((item) => item.name === info.getValue());
-      if (target) {
-        return NameJSX(target.icon, target.name);
-      }
-      return null;
+  columnHelper.accessor(
+    (row) => ({ component: row.component, isComponentOf: row.isComponentOf }),
+    {
+      id: 'notes',
+      header: 'Notes',
+      cell: (info) => {
+        if (info.getValue().component || info.getValue().isComponentOf) {
+          const component = weaponItemJson.items.find(
+            (item) => item.name === info.getValue().component,
+          );
+          const isComponentOf = weaponItemJson.items.find(
+            (item) => item.name === info.getValue().isComponentOf,
+          );
+          return (
+            <div>
+              {
+                component
+                  ? (
+                    <div>
+                      <div className="font-bold">Component</div>
+                      <div className="pl-2">{NameJSX(component.icon, component.name)}</div>
+                    </div>
+                  )
+                  : null
+              }
+              {
+                isComponentOf
+                  ? (
+                    <div>
+                      <div className="font-bold">Is Component Of</div>
+                      <div className="pl-2">{NameJSX(isComponentOf.icon, isComponentOf.name)}</div>
+                    </div>
+                  )
+                  : null
+              }
+            </div>
+          );
+        }
+        return null;
+      },
     },
-  }),
-  columnHelper.accessor('isComponentOf', {
-    id: 'is-component-of',
-    header: () => <div className="text-lg">Is Component Of</div>,
-    cell: (info) => {
-      const target = weaponItemJson.items.find((item) => item.name === info.getValue());
-      if (target) {
-        return NameJSX(target.icon, target.name);
-      }
-      return null;
-    },
-  }),
+  ),
 ];
 
 function ItemDataTable(
