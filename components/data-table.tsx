@@ -13,6 +13,7 @@ import Image from 'next/image';
 import tagJson from '@/data/tag.json';
 import weaponItemJson from '@/data/weapon-item.json';
 import { ItemData } from '@/types/item-type';
+import TableMeta from '@/types/table-meta-type';
 
 function NameJSX(iconUrl: string, name: string) {
   return (
@@ -174,10 +175,27 @@ const columns = [
       header: 'Notes',
       cell: (info) => {
         if (info.getValue().component || info.getValue().isComponentOf) {
-          const component = weaponItemJson.items.find(
+          const { category } = info.table.options.meta as TableMeta;
+          let itemJson = null;
+          switch (category.toLowerCase()) {
+            case 'weapon': {
+              itemJson = weaponItemJson;
+              break;
+            }
+            case 'vitality': {
+              break;
+            }
+            case 'spirit': {
+              break;
+            }
+            default: {
+              return null;
+            }
+          }
+          const component = itemJson?.items.find(
             (item) => item.name === info.getValue().component,
           );
-          const isComponentOf = weaponItemJson.items.find(
+          const isComponentOf = itemJson?.items.find(
             (item) => item.name === info.getValue().isComponentOf,
           );
           return (
@@ -256,6 +274,9 @@ export function WeaponItemDataTable() {
     columns,
     data,
     getCoreRowModel: getCoreRowModel(),
+    meta: {
+      category: weaponItemJson.category,
+    },
   });
 
   return (
