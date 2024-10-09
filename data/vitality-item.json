@@ -1,0 +1,801 @@
+{
+  "$schema": "../json-schemas/item-schema.json",
+  "patch": "09-19-2024",
+  "category": "Vitality",
+  "items": [
+    {
+      "name": "Enduring Spirit",
+      "icon": "https://deadlocked.wiki/images/8/80/Enduring_Spirit.png",
+      "price": 500,
+      "component": null,
+      "isComponentOf": null,
+      "descs": [
+        "+75 Bonus Health",
+        "+10% Spirit Lifesteal",
+        "+4 Spirit Power"
+      ],
+      "active": null,
+      "passive": null,
+      "tags": ["Health", "Spirit Lifesteal", "Spirit Power"]
+    },
+    {
+      "name": "Extra Health",
+      "icon": "https://deadlocked.wiki/images/6/69/Extra_Health.png",
+      "price": 500,
+      "component": null,
+      "isComponentOf": null,
+      "descs": [
+        "+160 Bonus Health",
+        "+5% Weapon Damage"
+      ],
+      "active": null,
+      "passive": null,
+      "tags": ["Health", "Bullet Damage"]
+    },
+    {
+      "name": "Extra Regen",
+      "icon": "https://deadlocked.wiki/images/6/60/Extra_Regen.png",
+      "price": 500,
+      "component": null,
+      "isComponentOf": null,
+      "descs": [
+        "+2.8 Health Regen",
+        "+8% Ammo",
+        "+25 Bonus Health"
+      ],
+      "active": null,
+      "passive": null,
+      "tags": ["Health Regen", "Ammo", "Health"]
+    },
+    {
+      "name": "Extra Stamina",
+      "icon": "https://deadlocked.wiki/images/2/28/Extra_Stamina.png",
+      "price": 500,
+      "component": null,
+      "isComponentOf": "Superior Stamina",
+      "descs": [
+        "+1 Stamina",
+        "+14% Stamina Recovery",
+        "+7% Fire Rate"
+      ],
+      "active": null,
+      "passive": null,
+      "tags": ["Stamina", "Stamina Recovery", "Fire Rate"]
+    },
+    {
+      "name": "Melee Lifesteal",
+      "icon": "https://deadlocked.wiki/images/2/24/Melee_Lifesteal.png",
+      "price": 500,
+      "component": null,
+      "isComponentOf": "Lifestrike",
+      "descs": [
+        "+12% Melee Damage",
+        "+75 Bonus Health"
+      ],
+      "active": null,
+      "passive": {
+        "cooldown": 7,
+        "desc": "Your melee attacks heal you for 20% of the Melee Damage dealt plus 90. This heal is 30% effective vs non-heroes.",
+        "additionalDescs": []
+      },
+      "tags": ["Melee", "Melee Damage", "Health", "Passive", "Passive Cooldown", "Healing"]
+    },
+    {
+      "name": "Sprint Boots",
+      "icon": "https://deadlocked.wiki/images/d/da/Sprint_Boots.png",
+      "price": 500,
+      "component": null,
+      "isComponentOf": "Enduring Speed",
+      "descs": [
+        "+2m/s Sprint Speed",
+        "+1 Health Regen",
+        "+4% Weapon Damage"
+      ],
+      "active": null,
+      "passive": null,
+      "tags": ["Sprint Speed", "Health Regen", "Bullet Damage"]
+    },
+    {
+      "name": "Healing Rite",
+      "icon": "https://deadlocked.wiki/images/7/72/Healing_Rite.png",
+      "price": 500,
+      "component": null,
+      "isComponentOf": "Health Nova",
+      "descs": [
+        "+45 Bonus Health",
+        "+3 Spirit Power"
+      ],
+      "active": {
+        "cooldown": 60,
+        "desc": "Grant Regen and Sprint Speed to the target. Gets dispelled if you take damage from enemy players or objectives. Can be self-cast.",
+        "additionalDescs": [
+          "370 Total Health Regen",
+          "+2m/s Sprint Speed",
+          "17s Regen Duration",
+          "30m Cast Range"
+        ]
+      },
+      "passive": null,
+      "tags": ["Health", "Spirit Power", "Active", "Healing", "Sprint Speed"]
+    },
+    {
+      "name": "Bullet Armor",
+      "icon": "https://deadlocked.wiki/images/b/bb/Bullet_Armor.png",
+      "price": 1250,
+      "component": null,
+      "isComponentOf": "Improved Bullet Armor",
+      "descs": [
+        "+25% Bullet Resist",
+        "+6% Weapon Damage"
+      ],
+      "active": null,
+      "passive": null,
+      "tags": ["Bullet Resist", "Bullet Damage"]
+    },
+    {
+      "name": "Bullet Lifesteal",
+      "icon": "https://deadlocked.wiki/images/5/57/Bullet_Lifesteal_%28item%29.png",
+      "price": 1250,
+      "component": null,
+      "isComponentOf": null,
+      "descs": [
+        "+28% Bullet Lifesteal",
+        "+75 Bonus Health"
+      ],
+      "active": null,
+      "passive": null,
+      "tags": ["Bullet Lifesteal", "Health"]
+    },
+    {
+      "name": "Combat Barrier",
+      "icon": "https://deadlocked.wiki/images/7/7c/Combat_Barrier.png",
+      "price": 1250,
+      "component": null,
+      "isComponentOf": null,
+      "descs": [
+        "+325 Bullet Shield Health"
+      ],
+      "active": null,
+      "passive": {
+        "cooldown": null,
+        "desc": "When you have a Bullet Shield, gain Weapon Damage and Fire Rate.",
+        "additionalDescs": [
+          "+25% Weapon Damage While Shielded",
+          "+6% Fire Rate While Shielded"
+        ]
+      },
+      "tags": ["Bullet Shield", "Passive", "Bullet Damage", "Fire Rate"]
+    },
+    {
+      "name": "Debuff Reducer",
+      "icon": "https://deadlocked.wiki/images/c/c3/Debuff_Reducer.png",
+      "price": 1250,
+      "component": null,
+      "isComponentOf": "Debuff Remover",
+      "descs": [
+        "+75 Bonus Health",
+        "+6% Weapon Damage"
+      ],
+      "active": null,
+      "passive": {
+        "cooldown": null,
+        "desc": "Reduces the duration of all negative effects applied to you. ",
+        "additionalDescs": [
+          "30% Debuff Resist"
+        ]
+      },
+      "tags": ["Health", "Bullet Damage", "Passive", "Debuff Resist"]
+    },
+    {
+      "name": "Enchanter's Barrier",
+      "icon": "https://deadlocked.wiki/images/5/54/Enchanter%27s_Barrier.png",
+      "price": 1250,
+      "component": null,
+      "isComponentOf": null,
+      "descs": [
+        "+300 Spirit Shield Health"
+      ],
+      "active": null,
+      "passive": {
+        "cooldown": null,
+        "desc": "While you have a Spirit Shield, gain bonus Spirit Power and cooldown Reduction.",
+        "additionalDescs": [
+          "+20 Spirit Power While Shielded",
+          "+8% Cooldown Reduction While Shielded"
+        ]
+      },
+      "tags": ["Spirit Shield", "Passive", "Spirit Power", "Cooldown Reduction"]
+    },
+    {
+      "name": "Enduring Speed",
+      "icon": "https://deadlocked.wiki/images/c/cd/Enduring_Speed.png",
+      "price": 1750,
+      "component": " Sprint Boots",
+      "isComponentOf": null,
+      "descs": [
+        "+1.4m/s Move Speed",
+        "+2m/s Sprint Speed",
+        "+75 Bonus Health",
+        "+1.5 Health Regen"
+      ],
+      "active": null,
+      "passive": {
+        "cooldown": null,
+        "desc": "Reduces the effects of enemy Movement Slow",
+        "additionalDescs": [
+          "+40% Movement Slow Resist"
+        ]
+      },
+      "tags": ["Movement Speed", "Sprint Speed", "Health", "Health Regen", "Passive", "Movement Slow Resist"]
+    },
+    {
+      "name": "Healbane",
+      "icon": "https://deadlocked.wiki/images/6/62/Healbane.png",
+      "price": 1250,
+      "component": null,
+      "isComponentOf": null,
+      "descs": [
+        "+75 Bonus Health"
+      ],
+      "active": null,
+      "passive": {
+        "cooldown": null,
+        "desc": "Your Spirit Damage applies Healing Reduction. If an enemy hero dies under this effect, you receive a large heal.",
+        "additionalDescs": [
+          "40% Healing Reduction (Conditional)",
+          "350 Heal on Hero Kill",
+          "6s Duration"
+        ]
+      },
+      "tags": ["Health", "Passive", "Healing Reduction", "Healing"]
+    },
+    {
+      "name": "Healing Booster",
+      "icon": "https://deadlocked.wiki/images/b/b0/Healing_Booster.png",
+      "price": 1250,
+      "component": null,
+      "isComponentOf": null,
+      "descs": [
+        "+6% Spirit Resist",
+        "+2 Health Regen"
+      ],
+      "active": null,
+      "passive": {
+        "cooldown": null,
+        "desc": "Increases the effectiveness of your Healing and increases your resistance to healing reduction.",
+        "additionalDescs": [
+          "+25% Healing Effectiveness",
+          "+15% Heal Reduction Resistance"
+        ]
+      },
+      "tags": ["Spirit Resist", "Health Regen", "Passive", "Healing", "Healing Reduction Resist"]
+    },
+    {
+      "name": "Reactive Barrier",
+      "icon": "https://deadlocked.wiki/images/f/f2/Reactive_Barrier.png",
+      "price": 1250,
+      "component": null,
+      "isComponentOf": null,
+      "descs": [
+        "+15% Ammo",
+        "+75 Bonus Health",
+        "+2 Health Regen"
+      ],
+      "active": null,
+      "passive": {
+        "cooldown": 32,
+        "desc": "Automatically deploy temporary Bullet and Spirit Shields when you are movement locked, Stunned, Chained, Immobilized, or Slept.",
+        "additionalDescs": [
+          "400 Bullet Shield Health (Conditional)",
+          "200 Spirit Shield Health (Conditional)",
+          "9s Duration"
+        ]
+      },
+      "tags": ["Ammo", "Health", "Health Regen", "Passive", "Bullet Shield", "Spirit Shield"]
+    },
+    {
+      "name": "Spirit Armor",
+      "icon": "https://deadlocked.wiki/images/a/ac/Spirit_Armor.png",
+      "price": 1250,
+      "component": null,
+      "isComponentOf": "Improved Spirit Armor",
+      "descs": [
+        "+20% Spirit Resist",
+        "+5 Spirit Power"
+      ],
+      "active": null,
+      "passive": null,
+      "tags": ["Spirit Resist", "Spirit Power"]
+    },
+    {
+      "name": "Spirit Lifesteal",
+      "icon": "https://deadlocked.wiki/images/d/d9/Spirit_Lifesteal_%28item%29.png",
+      "price": 1250,
+      "component": null,
+      "isComponentOf": null,
+      "descs": [
+        "+23% Spirit Lifesteal",
+        "+75 Bonus Health"
+      ],
+      "active": null,
+      "passive": null,
+      "tags": ["Spirit Lifesteal", "Health"]
+    },
+    {
+      "name": "Divine Barrier",
+      "icon": "https://deadlocked.wiki/images/7/74/Divine_Barrier.png",
+      "price": 1250,
+      "component": null,
+      "isComponentOf": null,
+      "descs": [
+        "+1m/s Sprint Speed",
+        "+50 Bonus Health",
+        "+8% Ability Range"
+      ],
+      "active": {
+        "cooldown": 30,
+        "desc": "Provide the target with Bullet Shield, Spirit Shield, and Movement Speed. Can be self-cast.",
+        "additionalDescs": [
+          "260 Bullet Shield",
+          "260 Spirit Shield",
+          "+2m/s Move Speed",
+          "5s Duration",
+          "35m Cast Range"
+        ]
+      },
+      "passive": null,
+      "tags": ["Sprint Speed", "Health", "Ability Range", "Active", "Bullet Shield", "Spirit Shield", "Movement Speed"]
+    },
+    {
+      "name": "Health Nova",
+      "icon": "https://deadlocked.wiki/images/b/b7/Health_Nova.png",
+      "price": 1750,
+      "component": "Healing Rite",
+      "isComponentOf": null,
+      "descs": [
+        "+12% Weapon Damage",
+        "+100 Bonus Health",
+        "+4 Spirit Power"
+      ],
+      "active": {
+        "cooldown": 60,
+        "desc": "Heal yourself and nearby allies. Heals an additional 20% per ally.",
+        "additionalDescs": [
+          "260 Total HP Regen",
+          "2s Regen Duration",
+          "15m Radius"
+        ]
+      },
+      "passive": null,
+      "tags": ["Bullet Damage", "Health", "Spirit Power", "Active", "Healing"]
+    },
+    {
+      "name": "Restorative Locket",
+      "icon": "https://deadlocked.wiki/images/0/07/Restorative_Locket.png",
+      "price": 1250,
+      "component": null,
+      "isComponentOf": null,
+      "descs": [
+        "+8% Spirit Resist",
+        "+5 Spirit Power"
+      ],
+      "active": {
+        "cooldown": 28,
+        "desc": "Consume all stacks to heal target ally and replenish a stamina point. Can be self-cast.",
+        "additionalDescs": [
+          "+35 Heal per Stack",
+          "15 Max Stacks"
+        ]
+      },
+      "passive": {
+        "cooldown": null,
+        "desc": "When an enemy uses an ability within 50m range from you, store one Restoration Stack.",
+        "additionalDescs": []
+      },
+      "tags": ["Spirit Resist", "Spirit Power", "Active", "Healing", "Stamina", "Passive"]
+    },
+    {
+      "name": "Return Fire",
+      "icon": "https://deadlocked.wiki/images/7/7c/Return_Fire.png",
+      "price": 1250,
+      "component": null,
+      "isComponentOf": null,
+      "descs": [
+        "+125 Bonus Health",
+        "+9 Spirit Power"
+      ],
+      "active": {
+        "cooldown": 25,
+        "desc": "Automatically fire a bullet towards any attacker who damages you with their abilities or weapon.",
+        "additionalDescs": [
+          "60% Bullet Damage Returned",
+          "30% Spirit Damage Returned",
+          "+25% Bullet Resist",
+          "7s Duration"
+        ]
+      },
+      "passive": null,
+      "tags": ["Health", "Spirit Power", "Active", "Bullet Resist"]
+    },
+    {
+      "name": "Fortitude",
+      "icon": "https://deadlocked.wiki/images/c/c6/Fortitude.png",
+      "price": 3000,
+      "component": null,
+      "isComponentOf": null,
+      "descs": [
+        "+300 Bonus Health"
+      ],
+      "active": null,
+      "passive": {
+        "cooldown": null,
+        "desc": "After not taking damage for 11s, gain 4% Max Health Regen.\nWhen you are above 75% health, you have bonus Weapon Damage and Movement Speed.",
+        "additionalDescs": [
+          "+25% Weapon Damage (Conditional)",
+          "+2m/s Move speed (Conditional)"
+        ]
+      },
+      "tags": ["Health", "Passive", "Bullet Damage", "Movement Speed"]
+    },
+    {
+      "name": "Improved Bullet Armor",
+      "icon": "https://deadlocked.wiki/images/2/2f/Improved_Bullet_Armor.png",
+      "price": 4250,
+      "component": "Bullet Armor",
+      "isComponentOf": null,
+      "descs": [
+        "+50% Bullet Resist",
+        "+10% Weapon Damage"
+      ],
+      "active": null,
+      "passive": null,
+      "tags": ["Bullet Resist", "Bullet Damage"]
+    },
+    {
+      "name": "Improved Spirit Armor",
+      "icon": "https://deadlocked.wiki/images/5/51/Improved_Spirit_Armor.png",
+      "price": 4250,
+      "component": "Spirit Armor",
+      "isComponentOf": null,
+      "descs": [
+        "+45% Spirit Resist",
+        "+8 Spirit Power"
+      ],
+      "active": null,
+      "passive": null,
+      "tags": ["Spirit Resist", "Spirit Power"]
+    },
+    {
+      "name": "Lifestrike",
+      "icon": "https://deadlocked.wiki/images/6/6a/Lifestrike.png",
+      "price": 3500,
+      "component": "Melee Lifesteal",
+      "isComponentOf": null,
+      "descs": [
+        "+40% Melee Damage",
+        "+125 Bonus Health",
+        "+8% Bullet Resist"
+      ],
+      "active": null,
+      "passive": {
+        "cooldown": 5,
+        "desc": "Your Melee Attack applies Movement Slow and heals you for 55% of the Melee Damage dealt plus 110. This heal is 40% effective vs non-heroes.",
+        "additionalDescs": [
+          "60% Movement Slow (Conditional)",
+          "2.5s Slow Duration"
+        ]
+      },
+      "tags": [
+        "Melee",
+        "Melee Damage",
+        "Health",
+        "Bullet Resist",
+        "Passive",
+        "Passive Cooldown",
+        "Movement Slow",
+        "Healing"
+      ]
+    },
+    {
+      "name": "Superior Stamina",
+      "icon": "https://deadlocked.wiki/images/1/18/Superior_Stamina.png",
+      "price": 3500,
+      "component": "Extra Stamina",
+      "isComponentOf": null,
+      "descs": [
+        "+3 Stamina",
+        "+20% Stamina Recovery",
+        "+30% Air Jump/Dash Distance",
+        "+7% Fire Rate",
+        "+8 Spirit Power"
+      ],
+      "active": null,
+      "passive": {
+        "cooldown": null,
+        "desc": "Increases the number of Air Dashes and Air Jumps that can be performed before landing from 1 to 2.",
+        "additionalDescs": []
+      },
+      "tags": ["Stamina", "Stamina Recovery", "Fire Rate", "Spirit Power"]
+    },
+    {
+      "name": "Veil Walker",
+      "icon": "https://deadlocked.wiki/images/6/69/Veil_Walker.png",
+      "price": 3000,
+      "component": null,
+      "isComponentOf": null,
+      "descs": [
+        "+200 Bullet Shield Health",
+        "+200 Spirit Shield Health",
+        "+12% Ammo",
+        "+10% Weapon Damage"
+      ],
+      "active": null,
+      "passive": {
+        "cooldown": 17,
+        "desc": "Walking through a Cosmic Veil grants you Stealth, increased Movement Speed, restores all Bullet and Spirit Shields.",
+        "additionalDescs": [
+          "Invisible for 5s (Status Effect)",
+          "3m/s Invis Move Speed (Conditional)"
+        ]
+      },
+      "tags": [
+        "Bullet Shield",
+        "Spirit Shield",
+        "Ammo",
+        "Bullet Damage",
+        "Passive",
+        "Passive Cooldown",
+        "Movement Speed"
+      ]
+    },
+    {
+      "name": "Debuff Remover",
+      "icon": "https://deadlocked.wiki/images/d/d9/Debuff_Remover.png",
+      "price": 4250,
+      "component": "Debuff Reducer",
+      "isComponentOf": null,
+      "descs": [
+        "+125 Bonus Health",
+        "+20% Weapon Damage"
+      ],
+      "active": {
+        "cooldown": 45,
+        "desc": "Purge all negative effects currently applied to you. If any effects were removed, gain a movement speed bonus.\nCannot be used while Stunned or Slept.",
+        "additionalDescs": [
+          "+3m/s Movement Speed",
+          "3s Duration"
+        ]
+      },
+      "passive": {
+        "cooldown": null,
+        "desc": "Reduces the duration of all negative effects applied to you.",
+        "additionalDescs": [
+          "35% Debuff Resist"
+        ]
+      },
+      "tags": ["Health", "Bullet Damage", "Active", "Movement Speed", "Passive", "Debuff Resist"]
+    },
+    {
+      "name": "Majestic Leap",
+      "icon": "https://deadlocked.wiki/images/d/d7/Majestic_Leap.png",
+      "price": 3000,
+      "component": null,
+      "isComponentOf": null,
+      "descs": [
+        "+10 Spirit Power",
+        "+125 Bonus Health"
+      ],
+      "active": {
+        "cooldown": 24,
+        "desc": "Launch yourself high into the air. While in the air, you can use the active again to drop down faster.\nCannot be used for 5s if attacked by enemy Hero.",
+        "additionalDescs": []
+      },
+      "passive": null,
+      "tags": ["Spirit Power", "Health", "Active"]
+    },
+    {
+      "name": "Metal Skin",
+      "icon": "https://deadlocked.wiki/images/f/fa/Metal_Skin.png",
+      "price": 3000,
+      "component": null,
+      "isComponentOf": null,
+      "descs": [
+        "+125 Bonus Health",
+        "+8 Spirit Power",
+        "+8% Fire Rate"
+      ],
+      "active": {
+        "cooldown": 22,
+        "desc": "Become immune to bullets and melee attacks.",
+        "additionalDescs": [
+          "3.5s Duration"
+        ]
+      },
+      "passive": null,
+      "tags": ["Health", "Spirit Power", "Fire Rate", "Active"]
+    },
+    {
+      "name": "Rescue Beam",
+      "icon": "https://deadlocked.wiki/images/c/c2/Rescue_Beam.png",
+      "price": 3000,
+      "component": null,
+      "isComponentOf": null,
+      "descs": [
+        "+125 Bonus Health",
+        "+2m/s Sprint Speed",
+        "+9 Spirit Power"
+      ],
+      "active": {
+        "cooldown": 25,
+        "desc": "Heals a target allied hero and yourself for a percentage of Max Health. Once while healing, you can Pull the target towards you. Can be self-cast.",
+        "additionalDescs": [
+          "26% Heal Amount",
+          "2.5s Channel Duration",
+          "36m Cast Range"
+        ]
+      },
+      "passive": null,
+      "tags": ["Health", "Sprint Speed", "Spirit Power", "Active", "Healing"]
+    },
+    {
+      "name": "Inhibitor",
+      "icon": "https://deadlocked.wiki/images/9/99/Inhibitor.png",
+      "price": 6200,
+      "component": null,
+      "isComponentOf": null,
+      "descs": [
+        "+25% Weapon Damage",
+        "+175 Bonus Health"
+      ],
+      "active": null,
+      "passive": {
+        "cooldown": null,
+        "desc": "Your bullets apply Movement Slow and reduce the target's outgoing damage on hit.",
+        "additionalDescs": [
+          "25% Movement Slow (Conditional)",
+          "-35% Damage Penalty (Conditional)",
+          "2.5s Debuff Duration"
+        ]
+      },
+      "tags": ["Bullet Damage", "Health", "Passive", "Movement Slow", "Damage Penalty"]
+    },
+    {
+      "name": "Leech",
+      "icon": "https://deadlocked.wiki/images/3/32/Leech.png",
+      "price": 6200,
+      "component": null,
+      "isComponentOf": null,
+      "descs": [
+        "+35% Spirit Lifesteal",
+        "+35% Bullet Lifesteal",
+        "+175 Bonus Health",
+        "+12 Spirit Power",
+        "+15% Weapon Damage"
+      ],
+      "active": null,
+      "passive": null,
+      "tags": ["Spirit Lifesteal", "Bullet Lifesteal", "Health", "Spirit Power", "Bullet Damage"]
+    },
+    {
+      "name": "Soul Rebirth",
+      "icon": "https://deadlocked.wiki/images/c/c3/Soul_Rebirth.png",
+      "price": 6200,
+      "component": null,
+      "isComponentOf": null,
+      "descs": [
+        "+15s Increased Respawn Time",
+        "+15% Cooldown Reduction",
+        "+12 Spirit Power"
+      ],
+      "active": null,
+      "passive": {
+        "cooldown": 180,
+        "desc": "If you die, after 4s you will respawn at your death location with partial health.",
+        "additionalDescs": [
+          "+50% Rebirth Health"
+        ]
+      },
+      "tags": ["Negative Effect", "Cooldown Reduction", "Spirit Power", "Passive", "Passive Cooldown"]
+    },
+    {
+      "name": "Colossus",
+      "icon": "https://deadlocked.wiki/images/b/bb/Colossus.png",
+      "price": 6200,
+      "component": null,
+      "isComponentOf": null,
+      "descs": [
+        "+600 Bonus Health",
+        "+20% Melee Damage",
+        "+20% Weapon Damage"
+      ],
+      "active": {
+        "cooldown": 37,
+        "desc": "Gain Bullet and Spirit Resist, and slow the movement and dash speed of enemies nearby. Your model size grows by 20%.",
+        "additionalDescs": [
+          "+40% Bullet Resist (Conditional)",
+          "+40% Spirit Resist (Conditional)",
+          "35% Movement Slow (Conditional)",
+          "14m Radius",
+          "7s Duration"
+        ]
+      },
+      "passive": null,
+      "tags": [
+        "Health",
+        "Melee",
+        "Melee Damage",
+        "Bullet Damage",
+        "Active",
+        "Bullet Resist",
+        "Spirit Resist",
+        "Movement Slow",
+        "Dash Slow"
+      ]
+    },
+    {
+      "name": "Siphon Bullets",
+      "icon": "https://deadlocked.wiki/images/2/2c/Siphon_Bullets.png",
+      "price": 6200,
+      "component": null,
+      "isComponentOf": null,
+      "descs": [
+        "+18% Bullet Resistance"
+      ],
+      "active": null,
+      "passive": {
+        "cooldown": null,
+        "desc": "Your bullets temporarily steal Max HP from enemies. Enemies regain their stolen health when the debuff expires. Permanently steal one stack of health if a siphoned target dies and lose 2 stacks if you die.",
+        "additionalDescs": [
+          "45 Max HP Steal Per Bullet",
+          "20s Steal Duration"
+        ]
+      },
+      "tags": ["Bullet Resist", "Passive", "Health"]
+    },
+    {
+      "name": "Phantom Strike",
+      "icon": "https://deadlocked.wiki/images/e/e6/Phantom_Strike.png",
+      "price": 6200,
+      "component": null,
+      "isComponentOf": null,
+      "descs": [
+        "15% Bullet Resist",
+        "+30% Weapon Damage"
+      ],
+      "active": {
+        "cooldown": 25,
+        "desc": "Teleport to an enemy target, applying Disarm, Slow, and dealing damage.",
+        "additionalDescs": [
+          "3s Disarm & Slow Duration",
+          "50% Movement Slow (Conditional)",
+          "75 Damage",
+          "25m Cast Range"
+        ]
+      },
+      "passive": null,
+      "tags": ["Bullet Resist", "Bullet Damage", "Active", "Disarm", "Movement Slow"]
+    },
+    {
+      "name": "Unstoppable",
+      "icon": "https://deadlocked.wiki/images/e/eb/Unstoppable.png",
+      "price": 6200,
+      "component": null,
+      "isComponentOf": null,
+      "descs": [
+        "+150 Bonus Health",
+        "+15% Spirit Resist",
+        "+1m/s Move Speed",
+        "+12 Spirit Power"
+      ],
+      "active": {
+        "cooldown": 60,
+        "desc": "Supress negative status effects and become Immune to Stun, Silence, Sleep, Root, and Disarm.",
+        "additionalDescs": [
+          "6s Duration"
+        ]
+      },
+      "passive": null,
+      "tags": ["Health", "Spirit Resist", "Movement Speed", "Spirit Power", "Active"]
+    }
+  ]
+}

@@ -12,6 +12,7 @@ import Image from 'next/image';
 
 import tagJson from '@/data/tag.json';
 import weaponItemJson from '@/data/weapon-item.json';
+import vitalityItemJson from '@/data/vitality-item.json';
 import { ItemData } from '@/types/item-type';
 import TableMeta from '@/types/table-meta-type';
 
@@ -135,7 +136,7 @@ const columns = [
     id: 'tags',
     header: 'Tags',
     cell: (info) => (
-      <div className="flex-wrap flex gap-1 text-sm w-40">
+      <div className="flex-wrap flex gap-1 text-sm w-44">
         {info.getValue().map((tag) => {
           let style = 'bg-slate-500';
           if (tagJson.weaponTags.includes(tag)) {
@@ -183,6 +184,7 @@ const columns = [
               break;
             }
             case 'vitality': {
+              itemJson = vitalityItemJson;
               break;
             }
             case 'spirit': {
@@ -285,7 +287,19 @@ export function WeaponItemDataTable() {
 }
 
 export function VitalityItemDataTable() {
+  const data = useMemo(() => vitalityItemJson.items, []);
+  const table = useReactTable({
+    columns,
+    data,
+    getCoreRowModel: getCoreRowModel(),
+    meta: {
+      category: vitalityItemJson.category,
+    },
+  });
 
+  return (
+    <ItemDataTable table={table} borderColor="border-vitality/50" />
+  );
 }
 
 export function SpiritItemDataTable() {
