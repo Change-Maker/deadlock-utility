@@ -1,4 +1,7 @@
-import { WeaponItemDataTable } from '@/components/data-table';
+import {
+  VitalityItemDataTable,
+  WeaponItemDataTable,
+} from '@/components/data-table';
 
 export default function Items() {
   return (
@@ -10,14 +13,30 @@ export default function Items() {
           p-4
           mb-5
           min-w-fit
-          bg-amber-500/10
+          bg-weapon/10
           outline
           outline-1
-          outline-amber-500
+          outline-weapon
           outline-offset-2
         `}
       >
         <WeaponItemDataTable />
+      </div>
+      <div
+        className={`
+          container
+          rounded-md
+          p-4
+          mb-5
+          min-w-fit
+          bg-vitality/10
+          outline
+          outline-1
+          outline-vitality
+          outline-offset-2
+        `}
+      >
+        <VitalityItemDataTable />
       </div>
     </div>
   );

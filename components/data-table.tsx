@@ -12,7 +12,9 @@ import Image from 'next/image';
 
 import tagJson from '@/data/tag.json';
 import weaponItemJson from '@/data/weapon-item.json';
+import vitalityItemJson from '@/data/vitality-item.json';
 import { ItemData } from '@/types/item-type';
+import TableMeta from '@/types/table-meta-type';
 
 function NameJSX(iconUrl: string, name: string) {
   return (
@@ -52,7 +54,7 @@ const columns = [
     (row) => ({ price: row.price, icon: row.icon, name: row.name }),
     {
       id: 'price-name',
-      header: 'Price&Name',
+      header: 'Price & Name',
       cell: (info) => (
         <div className="flex-col flex-nowrap flex">
           {PriceJSX(info.getValue().price)}
@@ -134,7 +136,7 @@ const columns = [
     id: 'tags',
     header: 'Tags',
     cell: (info) => (
-      <div className="flex-wrap flex gap-1 text-sm w-40">
+      <div className="flex-wrap flex gap-1 text-sm w-44">
         {info.getValue().map((tag) => {
           let style = 'bg-slate-500';
           if (tagJson.weaponTags.includes(tag)) {
@@ -174,10 +176,28 @@ const columns = [
       header: 'Notes',
       cell: (info) => {
         if (info.getValue().component || info.getValue().isComponentOf) {
-          const component = weaponItemJson.items.find(
+          const { category } = info.table.options.meta as TableMeta;
+          let itemJson = null;
+          switch (category.toLowerCase()) {
+            case 'weapon': {
+              itemJson = weaponItemJson;
+              break;
+            }
+            case 'vitality': {
+              itemJson = vitalityItemJson;
+              break;
+            }
+            case 'spirit': {
+              break;
+            }
+            default: {
+              return null;
+            }
+          }
+          const component = itemJson?.items.find(
             (item) => item.name === info.getValue().component,
           );
-          const isComponentOf = weaponItemJson.items.find(
+          const isComponentOf = itemJson?.items.find(
             (item) => item.name === info.getValue().isComponentOf,
           );
           return (
@@ -256,6 +276,9 @@ export function WeaponItemDataTable() {
     columns,
     data,
     getCoreRowModel: getCoreRowModel(),
+    meta: {
+      category: weaponItemJson.category,
+    },
   });
 
   return (
@@ -264,7 +287,19 @@ export function WeaponItemDataTable() {
 }
 
 export function VitalityItemDataTable() {
+  const data = useMemo(() => vitalityItemJson.items, []);
+  const table = useReactTable({
+    columns,
+    data,
+    getCoreRowModel: getCoreRowModel(),
+    meta: {
+      category: vitalityItemJson.category,
+    },
+  });
 
+  return (
+    <ItemDataTable table={table} borderColor="border-vitality/50" />
+  );
 }
 
 export function SpiritItemDataTable() {
