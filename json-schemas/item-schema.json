@@ -97,6 +97,7 @@
                 "Bullet Velocity",
                 "Fire Rate",
                 "Headshot",
+                "Reload",
                 "Reload Time",
 
                 "Bullet Lifesteal",
@@ -139,6 +140,7 @@
                 "Disarm",
                 "Fire Rate Slow",
                 "Healing Reduction",
+                "Interrupt",
                 "Movement Slow",
                 "Silence",
                 "Sleep",

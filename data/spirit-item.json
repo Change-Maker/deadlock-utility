@@ -1,0 +1,765 @@
+{
+  "$schema": "../json-schemas/item-schema.json",
+  "patch": "09-19-2024",
+  "category": "Spirit",
+  "items": [
+    {
+      "name": "Ammo Scavenger",
+      "icon": "https://deadlocked.wiki/images/2/2b/Ammo_Scavenger.png",
+      "price": 500,
+      "component": null,
+      "isComponentOf": null,
+      "descs": [
+        "+10% Ammo",
+        "+40 Bonus Health"
+      ],
+      "active": null,
+      "passive": {
+        "cooldown": 0,
+        "desc": "Any time you secure or deny a Soul you get ammo back and gain stacking Spirit Power",
+        "additionalDescs": [
+          "2 Ammo Per Soul",
+          "2 Spirit Power Per Soul",
+          "30s Spirit Power Duration",
+          "10 Max Stacks"
+        ]
+      },
+      "tags": ["Ammo", "Health", "Passive", "Spirit Power"]
+    },
+    {
+      "name": "Extra Charge",
+      "icon": "https://deadlocked.wiki/images/4/4a/Extra_Charge.png",
+      "price": 500,
+      "component": null,
+      "isComponentOf": "Rapid Recharge",
+      "descs": [
+        "+1 Bonus Ability Charges",
+        "+10% Cooldown Reduction for Charged Abilities",
+        "+6% Weapon Damage"
+      ],
+      "active": null,
+      "passive": null,
+      "tags": ["Charged Ability", "Cooldown Reduction", "Bullet Damage"]
+    },
+    {
+      "name": "Extra Spirit",
+      "icon": "https://deadlocked.wiki/images/9/94/Extra_Spirit.png",
+      "price": 500,
+      "component": null,
+      "isComponentOf": "Improved Spirit",
+      "descs": [
+        "+9 Spirit Power",
+        "+1 Health Regen",
+        "+35 Bonus Health"
+      ],
+      "active": null,
+      "passive": null,
+      "tags": ["Spirit Power", "Health Regen", "Health"]
+    },
+    {
+      "name": "Mystic Burst",
+      "icon": "https://deadlocked.wiki/images/9/95/Mystic_Burst.png",
+      "price": 500,
+      "component": null,
+      "isComponentOf": "Improved Burst",
+      "descs": [
+        "+40 Spirit Shield Health",
+        "+6% Weapon Damage"
+      ],
+      "active": null,
+      "passive": {
+        "cooldown": 6.2,
+        "desc": "Abilities deal bonus Spirit Damage if they deal 80 damage or more in a single hit.",
+        "additionalDescs": [
+          "35 Bonus Damage"
+        ]
+      },
+      "tags": ["Spirit Shield", "Bullet Damage", "Passive", "Passive Cooldown"]
+    },
+    {
+      "name": "Mystic Reach",
+      "icon": "https://deadlocked.wiki/images/0/03/Mystic_Reach.png",
+      "price": 500,
+      "component": null,
+      "isComponentOf": "Improved Reach",
+      "descs": [
+        "+18% Ability Range",
+        "+6% Bullet Resist"
+      ],
+      "active": null,
+      "passive": null,
+      "tags": ["Ability Range", "Bullet Resist"]
+    },
+    {
+      "name": "Spirit Strike",
+      "icon": "https://deadlocked.wiki/images/7/7c/Spirit_Strike.png",
+      "price": 500,
+      "component": null,
+      "isComponentOf": null,
+      "descs": [
+        "+80 Spirit Shield Health",
+        "+12% Melee Damage"
+      ],
+      "active": null,
+      "passive": {
+        "cooldown": 8.5,
+        "desc": "When you perform a Light or Heavy Melee attack against a hero, deal Extra Spirit Damage with the attack and reduce the target's Spirit Resist",
+        "additionalDescs": [
+          "50 + (0.42 * SpiritPower) Spirit Damage",
+          "-12% Spirit Resist",
+          "11s Duration"
+        ]
+      },
+      "tags": [
+        "Spirit Shield",
+        "Melee",
+        "Melee Damage",
+        "Passive",
+        "Passive Cooldown",
+        "Spirit Damage",
+        "Spirit Resist Reduction"
+      ]
+    },
+    {
+      "name": "Infuser",
+      "icon": "https://deadlocked.wiki/images/c/c3/Infuser.png",
+      "price": 500,
+      "component": null,
+      "isComponentOf": null,
+      "descs": [
+        "+50 Bonus Health",
+        "+10% Ammo"
+      ],
+      "active": {
+        "cooldown": 37,
+        "desc": "Gain Spirit Power and Spirit Lifesteal.",
+        "additionalDescs": [
+          "+16 Spirit Power",
+          "+20% Spirit Lifesteal",
+          "6s Duration"
+        ]
+      },
+      "passive": null,
+      "tags": ["Health", "Ammo", "Active", "Spirit Power", "Spirit Lifesteal"]
+    },
+    {
+      "name": "Bullet Resist Shredder",
+      "icon": "https://deadlocked.wiki/images/7/7d/Bullet_Resist_Shredder.png",
+      "price": 1250,
+      "component": null,
+      "isComponentOf": null,
+      "descs": [
+        "+100 Bonus Health",
+        "+5% Bullet Resist"
+      ],
+      "active": null,
+      "passive": {
+        "cooldown": 0,
+        "desc": "Reduces Bullet Resist on enemies when you deal Spirit Damage.",
+        "additionalDescs": [
+          "-12% Bullet Resist",
+          "8s Duration"
+        ]
+      },
+      "tags": ["Health", "Bullet Resist", "Passive", "Bullet Resist Reduction"]
+    },
+    {
+      "name": "Duration Extender",
+      "icon": "https://deadlocked.wiki/images/f/fb/Duration_Extender.png",
+      "price": 1250,
+      "component": null,
+      "isComponentOf": "Superior Duration",
+      "descs": [
+        "+16% Ability Duration",
+        "+100 Bonus Health",
+        "+1.75 Health Regen"
+      ],
+      "active": null,
+      "passive": null,
+      "tags": ["Ability Duration", "Health", "Health Regen"]
+    },
+    {
+      "name": "Improved Cooldown",
+      "icon": "https://deadlocked.wiki/images/b/b5/Improved_Cooldown.png",
+      "price": 1250,
+      "component": null,
+      "isComponentOf": "Superior Cooldown",
+      "descs": [
+        "+16% Cooldown Reduction",
+        "+1.5 Health Regen"
+      ],
+      "active": null,
+      "passive": null,
+      "tags": ["Cooldown Reduction", "Health Regen"]
+    },
+    {
+      "name": "Mystic Vulnerability",
+      "icon": "https://deadlocked.wiki/images/c/c7/Mystic_Vulnerability.png",
+      "price": 1250,
+      "component": null,
+      "isComponentOf": "Escalating Exposure",
+      "descs": [
+        "+6% Spirit Resist"
+      ],
+      "active": null,
+      "passive": {
+        "cooldown": 0,
+        "desc": "When the target takes Spirit Damage, they have their Spirit Resist reduced.",
+        "additionalDescs": [
+          "-12% Spirit Resist",
+          "6s Duration"
+        ]
+      },
+      "tags": ["Spirit Resist", "Passive", "Spirit Resist Reduction"]
+    },
+    {
+      "name": "Quicksilver Reload",
+      "icon": "https://deadlocked.wiki/images/3/3b/Quicksilver_Reload.png",
+      "price": 1250,
+      "component": null,
+      "isComponentOf": null,
+      "descs": [],
+      "active": null,
+      "passive": {
+        "cooldown": 12,
+        "desc": "Imbue an ability with bonus Spirit Damage on the first hit. When the ability is used, your weapon is reloaded and has a Fire Rate bonus for that clip. Only activates when Ammo is not full.",
+        "additionalDescs": [
+          "65 Spirit Damage",
+          "15% Fire Rate Bonus",
+          "12s Max Frequency"
+        ]
+      },
+      "tags": ["Passive", "Passive Cooldown", "Spirit Damage", "Fire Rate", "Reload"]
+    },
+    {
+      "name": "Suppressor",
+      "icon": "https://deadlocked.wiki/images/2/21/Suppressor.png",
+      "price": 1250,
+      "component": null,
+      "isComponentOf": "Mystic Slow",
+      "descs": [
+        "+50 Bonus Health",
+        "+2.5 Health Regen",
+        "+4 Spirit Power"
+      ],
+      "active": null,
+      "passive": {
+        "cooldown": 0,
+        "desc": "When you deal Spirit Damage to enemies, you also apply Fire Rate Slow.",
+        "additionalDescs": [
+          "-25% Fire Rate Slow",
+          "2s Duration"
+        ]
+      },
+      "tags": ["Health", "Health Regen", "Spirit Power", "Passive", "Fire Rate Slow"]
+    },
+    {
+      "name": "Cold Front",
+      "icon": "https://deadlocked.wiki/images/4/4d/Cold_Front.png",
+      "price": 1250,
+      "component": null,
+      "isComponentOf": null,
+      "descs": [
+        "+10% Spirit Resist"
+      ],
+      "active": {
+        "cooldown": 32,
+        "desc": "Release an expanding ice blast that deals Spirit Damage and Slows targets it hits.",
+        "additionalDescs": [
+          "75 + (1.5 * SpiritPower) Spirit Damage",
+          "40% Movement Slow",
+          "14m End Radius",
+          "3s Duration"
+        ]
+      },
+      "passive": null,
+      "tags": ["Spirit Resist", "Active", "Spirit Damage", "Movement Slow"]
+    },
+    {
+      "name": "Decay",
+      "icon": "https://deadlocked.wiki/images/9/93/Decay.png",
+      "price": 1250,
+      "component": null,
+      "isComponentOf": null,
+      "descs": [
+        "+7 Spirit Power"
+      ],
+      "active": {
+        "cooldown": 45,
+        "desc": "Reduces healing received of targeted enemy and inflicts damage over time of their current health. Decay's damage is non-lethal.",
+        "additionalDescs": [
+          "-50% Healing Reduction",
+          "3.1%/sec Bleed Damage",
+          "15m + (0.16 * SpiritPower) Cast Range",
+          "10s Duration"
+        ]
+      },
+      "passive": null,
+      "tags": ["Spirit Power", "Active", "Healing Reduction", "Non-lethal"]
+    },
+    {
+      "name": "Slowing Hex",
+      "icon": "https://deadlocked.wiki/images/1/18/Slowing_Hex.png",
+      "price": 1250,
+      "component": null,
+      "isComponentOf": null,
+      "descs": [
+        "+1m/s Sprint Speed",
+        "+5 Spirit Power"
+      ],
+      "active": {
+        "cooldown": 25,
+        "desc": "Deals Spirit Damage and Slows targets movement and dashes. Also Silences their movement-based items and abilities. Does not affect target's stamina usage.",
+        "additionalDescs": [
+          "70 + (0.59 * SpiritPower) Spirit Damage",
+          "30% Movement Slow",
+          "25m Cast Range",
+          "3s Duration"
+        ]
+      },
+      "passive": null,
+      "tags": ["Sprint Speed", "Spirit Power", "Active", "Spirit Damage", "Movement Slow", "Silence"]
+    },
+    {
+      "name": "Withering Whip",
+      "icon": "https://deadlocked.wiki/images/0/0a/Withering_Whip.png",
+      "price": 1250,
+      "component": null,
+      "isComponentOf": null,
+      "descs": [
+        "+6 Spirit Power",
+        "+50 Bonus Health",
+        "+1m/s Sprint Speed"
+      ],
+      "active": {
+        "cooldown": 26,
+        "desc": "Target an enemy to apply Fire Rate Slow and reduce their Bullet Resist.",
+        "additionalDescs": [
+          "-45% Fire Rate Slow",
+          "-14% Bullet Resist",
+          "30m Cast Range",
+          "4.5s Duration"
+        ]
+      },
+      "passive": null,
+      "tags": ["Spirit Power", "Health", "Sprint Speed", "Active", "Fire Rate Slow", "Bullet Resist Reduction"]
+    },
+    {
+      "name": "Improved Burst",
+      "icon": "https://deadlocked.wiki/images/d/dd/Improved_Burst.png",
+      "price": 3500,
+      "component": "Mystic Burst",
+      "isComponentOf": null,
+      "descs": [
+        "+100 Spirit Shield Health",
+        "+8% Weapon Damage"
+      ],
+      "active": null,
+      "passive": {
+        "cooldown": 0,
+        "desc": "Abilities deal bonus Spirit Damage if they deal 125 damage or more in a single hit.\nTargets are immune to the effects of Improved Burst for 5s after taking damage from it.",
+        "additionalDescs": [
+          "+9% Max Health Bonus Damage (Conditional)"
+        ]
+      },
+      "tags": ["Spirit Shield", "Bullet Damage", "Passive", "Spirit Damage"]
+    },
+    {
+      "name": "Improved Reach",
+      "icon": "https://deadlocked.wiki/images/9/91/Improved_Reach.png",
+      "price": 3500,
+      "component": "Mystic Reach",
+      "isComponentOf": null,
+      "descs": [
+        "+35% Imbued Ability Ability Range",
+        "+25% Non-Imbued Ability Ability Range",
+        "+12% Bullet Resist",
+        "+8 Spirit Power"
+      ],
+      "active": null,
+      "passive": null,
+      "tags": ["Ability Range", "Bullet Resist", "Spirit Power"]
+    },
+    {
+      "name": "Improved Spirit",
+      "icon": "https://deadlocked.wiki/images/c/c9/Improved_Spirit.png",
+      "price": 3500,
+      "component": "Extra Spirit",
+      "isComponentOf": "Boundless Spirit",
+      "descs": [
+        "+23 Spirit Power",
+        "+2 Health Regen",
+        "+1m/s Sprint Speed",
+        "+100 Bonus Health"
+      ],
+      "active": null,
+      "passive": null,
+      "tags": ["Spirit Power", "Health Regen", "Sprint Speed", "Health"]
+    },
+    {
+      "name": "Mystic Slow",
+      "icon": "https://deadlocked.wiki/images/6/65/Mystic_Slow.png",
+      "price": 4250,
+      "component": "Suppressor",
+      "isComponentOf": null,
+      "descs": [
+        "+100 Bonus Health",
+        "+3 Health Regen",
+        "+6 Spirit Power"
+      ],
+      "active": null,
+      "passive": {
+        "cooldown": 0,
+        "desc": "If a target takes Spirit damage, they have their Movement Speed and Fire Rate reduced.",
+        "additionalDescs": [
+          "+30% Movement Slow",
+          "+40% Fire Rate Slow",
+          "2s Duration"
+        ]
+      },
+      "tags": ["Health", "Health Regen", "Spirit Power", "Passive", "Movement Slow", "Fire Rate Slow"]
+    },
+    {
+      "name": "Rapid Recharge",
+      "icon": "https://deadlocked.wiki/images/a/a9/Rapid_Recharge.png",
+      "price": 3500,
+      "component": "Extra Charge",
+      "isComponentOf": null,
+      "descs": [
+        "+2 Bonus Ability Charges",
+        "+65% Faster Time Between Charges",
+        "+30% Charged Ability Cooldown Reduction",
+        "+12% Weapon Damage"
+      ],
+      "active": null,
+      "passive": null,
+      "tags": ["Charged Ability", "Cooldown Reduction", "Bullet Damage"]
+    },
+    {
+      "name": "Superior Cooldown",
+      "icon": "https://deadlocked.wiki/images/9/93/Superior_Cooldown.png",
+      "price": 4250,
+      "component": "Improved Cooldown",
+      "isComponentOf": null,
+      "descs": [
+        "+32% Imbued Ability Cooldown Reduction",
+        "+24% Non-Imbued Ability Cooldown Reduction",
+        "+4 Health Regen"
+      ],
+      "active": null,
+      "passive": null,
+      "tags": ["Cooldown Reduction", "Health Regen"]
+    },
+    {
+      "name": "Superior Duration",
+      "icon": "https://deadlocked.wiki/images/c/c7/Superior_Duration.png",
+      "price": 3500,
+      "component": "Duration Extender",
+      "isComponentOf": null,
+      "descs": [
+        "+32% Imbued Ability Duration",
+        "+26% Non-Imbued Ability Duration",
+        "+175 Bonus Health",
+        "+15% Weapon Damage",
+        "+4 Health Regen"
+      ],
+      "active": null,
+      "passive": null,
+      "tags": ["Ability Duration", "Health", "Bullet Damage", "Health Regen"]
+    },
+    {
+      "name": "Surge of Power",
+      "icon": "https://deadlocked.wiki/images/d/d4/Surge_of_Power.png",
+      "price": 3000,
+      "component": null,
+      "isComponentOf": null,
+      "descs": [
+        "+75 Bonus Health"
+      ],
+      "active": null,
+      "passive": {
+        "cooldown": 10.5,
+        "desc": "Imbue an ability with permanent Spirit Power. When that ability is used, gain bonus Movement Speed and Fire Rate Bonus for a duration of 6s.",
+        "additionalDescs": [
+          "+34 Spirit Power",
+          "10% Fire Rate Bonus (Conditional)",
+          "+3m/s Move Speed (Conditional)",
+          "6s Duration"
+        ]
+      },
+      "tags": ["Health", "Passive", "Passive Cooldown", "Spirit Power", "Movement Speed", "Fire Rate"]
+    },
+    {
+      "name": "Torment Pulse",
+      "icon": "https://deadlocked.wiki/images/4/42/Torment_Pulse.png",
+      "price": 3000,
+      "component": null,
+      "isComponentOf": null,
+      "descs": [
+        "+160 Bonus Health",
+        "+6 Spirit Power"
+      ],
+      "active": null,
+      "passive": {
+        "cooldown": 1.5,
+        "desc": "Periodically deals Spirit Damage to the 2 closest enemies nearby.",
+        "additionalDescs": [
+          "40 + (0.33 * SpiritPower) Spirit Damage",
+          "9m Pulse Radius"
+        ]
+      },
+      "tags": ["Health", "Spirit Power", "Passive", "Passive Cooldown", "Spirit Damage"]
+    },
+    {
+      "name": "Ethereal Shift",
+      "icon": "https://deadlocked.wiki/images/3/3c/Ethereal_Shift.png",
+      "price": 3000,
+      "component": null,
+      "isComponentOf": null,
+      "descs": [],
+      "active": {
+        "cooldown": 30,
+        "desc": "You enter a void state and become untargetable and invincible for a short duration, during which you cannot move or perform any actions.\nAfterwards you instantly reload and gain bonus Spirit Power.",
+        "additionalDescs": [
+          "3.5s Duration",
+          "+14 Bonus Spirit Power",
+          "10s Bonus Spirit Duration"
+        ]
+      },
+      "passive": null,
+      "tags": ["Active", "Reload", "Spirit Power"]
+    },
+    {
+      "name": "Knockdown",
+      "icon": "https://deadlocked.wiki/images/3/36/Knockdown.png",
+      "price": 3000,
+      "component": null,
+      "isComponentOf": null,
+      "descs": [
+        "+1 Stamina",
+        "+200 Spirit Shield Health",
+        "+6 Spirit Power"
+      ],
+      "active": {
+        "cooldown": 48,
+        "desc": "Target is knocked down and Stunned after a 2s delay, interrupting and temporarily preventing them from taking any action.",
+        "additionalDescs": [
+          "0.9s Stun Duration",
+          "45m Cast Range"
+        ]
+      },
+      "passive": null,
+      "tags": ["Stamina", "Spirit Shield", "Spirit Power", "Active", "Stun"]
+    },
+    {
+      "name": "Silence Glyph",
+      "icon": "https://deadlocked.wiki/images/3/3c/Silence_Glyph.png",
+      "price": 3000,
+      "component": null,
+      "isComponentOf": null,
+      "descs": [
+        "+150 Spirit Shield Health",
+        "+1m/s Sprint Speed"
+      ],
+      "active": {
+        "cooldown": 32,
+        "desc": "Fires a projectile which silences and damages the target. Silence does not interrupt channeling abilities.",
+        "additionalDescs": [
+          "25m Cast Range",
+          "3s Duration",
+          "100 + (1.00 * SpiritPower) Spirit Damage"
+        ]
+      },
+      "passive": null,
+      "tags": ["Spirit Shield", "Sprint Speed", "Active", "Silence", "Spirit Damage"]
+    },
+    {
+      "name": "Boundless Spirit",
+      "icon": "https://deadlocked.wiki/images/9/97/Boundless_Spirit.png",
+      "price": 9700,
+      "component": "Improved Spirit",
+      "isComponentOf": null,
+      "descs": [
+        "+60 Spirit Power",
+        "+300 Bonus Health",
+        "+15 Health Regen",
+        "+25% Weapon Damage",
+        "+2m/s Sprint Speed"
+      ],
+      "active": null,
+      "passive": null,
+      "tags": ["Spirit Power", "Health", "Health Regen", "Bullet Damage", "Sprint Speed"]
+    },
+    {
+      "name": "Diviner's Kevlar",
+      "icon": "https://deadlocked.wiki/images/0/0a/Diviner%27s_Kevlar.png",
+      "price": 6200,
+      "component": null,
+      "isComponentOf": null,
+      "descs": [
+        "+20% Spirit Lifesteal",
+        "+12% Cooldown Reduction"
+      ],
+      "active": null,
+      "passive": {
+        "cooldown": 60,
+        "desc": "Upon casting an ultimate ability gain temporary Bullet Shield, Spirit Shield, and Spirit Power.",
+        "additionalDescs": [
+          "700 Bullet Shield",
+          "700 Spirit Shield",
+          "+40 Spirit Power",
+          "15s Duration"
+        ]
+      },
+      "tags": [
+        "Spirit Lifesteal",
+        "Cooldown Reduction",
+        "Passive",
+        "Passive Cooldown",
+        "Bullet Shield",
+        "Spirit Shield",
+        "Spirit Power"
+      ]
+    },
+    {
+      "name": "Escalating Exposure",
+      "icon": "https://deadlocked.wiki/images/2/21/Escalating_Exposure.png",
+      "price": 7450,
+      "component": "Mystic Vulnerability",
+      "isComponentOf": null,
+      "descs": [
+        "+15% Spirit Resist",
+        "+125 Bonus Health",
+        "-15% Spirit Resist on Spirit Damage"
+      ],
+      "active": null,
+      "passive": {
+        "cooldown": null,
+        "desc": "Dealing Spirit Damage applies a stacking Spirit Amp that increases your Spirit Damage to the target.",
+        "additionalDescs": [
+          "+6% Spirit Amp per Stack",
+          "15s Duration",
+          "0.7s Max Frequency per Target",
+          "20 maximum stacks (120% maximum Spirit Amp)"
+        ]
+      },
+      "tags": ["Spirit Resist", "Health", "Spirit Resist Reduction", "Passive"]
+    },
+    {
+      "name": "Mystic Reverb",
+      "icon": "https://deadlocked.wiki/images/0/07/Mystic_Reverb.png",
+      "price": 6200,
+      "component": null,
+      "isComponentOf": null,
+      "descs": [
+        "+15% Spirit Lifesteal",
+        "+15% Spirit Resist",
+        "+15% Ability Range"
+      ],
+      "active": null,
+      "passive": {
+        "cooldown": 6,
+        "desc": "Imbue an ability to apply slow in a radius around the target and deal an additional percentage of the damage dealt to enemies around the target after a short delay.",
+        "additionalDescs": [
+          "+40% Damage (Conditional)",
+          "+50% Movement Slow (Conditional)",
+          "16m Radius",
+          "3s Delay Duration"
+        ]
+      },
+      "tags": [
+        "Spirit Lifesteal",
+        "Spirit Resist",
+        "Ability Range",
+        "Passive",
+        "Passive Cooldown",
+        "Spirit Damage",
+        "Movement Slow"
+      ]
+    },
+    {
+      "name": "Curse",
+      "icon": "https://deadlocked.wiki/images/8/85/Curse.png",
+      "price": 6200,
+      "component": null,
+      "isComponentOf": null,
+      "descs": [
+        "+20% Weapon Damage",
+        "+8 Spirit Power"
+      ],
+      "active": {
+        "cooldown": 50,
+        "desc": "Curses an enemy - interrupting, Silencing, Disarming, and preventing item usage.",
+        "additionalDescs": [
+          "3.25s Status Duration",
+          "20m Cast Range"
+        ]
+      },
+      "passive": null,
+      "tags": ["Bullet Damage", "Spirit Power", "Active", "Interrupt", "Silence", "Disarm"]
+    },
+    {
+      "name": "Echo Shard",
+      "icon": "https://deadlocked.wiki/images/a/ab/Echo_Shard.png",
+      "price": 6200,
+      "component": null,
+      "isComponentOf": null,
+      "descs": [
+        "+1m/s Move Speed",
+        "+16% Bullet Resist",
+        "+12 Spirit Power"
+      ],
+      "active": {
+        "cooldown": 21,
+        "desc": "Reset the cooldown of your most recently used non-ultimate ability.",
+        "additionalDescs": []
+      },
+      "passive": null,
+      "tags": ["Movement Speed", "Bullet Resist", "Spirit Power", "Active"]
+    },
+    {
+      "name": "Magic Carpet",
+      "icon": "https://deadlocked.wiki/images/2/25/Magic_Carpet.png",
+      "price": 6200,
+      "component": null,
+      "isComponentOf": null,
+      "descs": [
+        "+10% Ability Duration",
+        "+15 Spirit Power",
+        "+150 Bonus Health"
+      ],
+      "active": {
+        "cooldown": 32,
+        "desc": "Summon a Magic Carpet that will fly you away and gain Bullet and Spirit Shields. Cannot use abilities while the carpet is being summoned. While flying you are immune to slows and doing any action will dismiss the carpet.",
+        "additionalDescs": [
+          "+400 Bullet Shield Health",
+          "+400 Spirit Shield Health",
+          "7s Duration",
+          "1.3s Summon Duration",
+          "+6m/s Bonus Fly Speed",
+          "16s Shield Duration"
+        ]
+      },
+      "passive": null,
+      "tags": ["Ability Duration", "Spirit Power", "Health", "Active", "Bullet Shield", "Spirit Shield"]
+    },
+    {
+      "name": "Refresher",
+      "icon": "https://deadlocked.wiki/images/5/53/Refresher.png",
+      "price": 6200,
+      "component": null,
+      "isComponentOf": null,
+      "descs": [
+        "+8% Spirit Resist",
+        "+16% Bullet Resist"
+      ],
+      "active": {
+        "cooldown": 230,
+        "desc": "Reset the cooldown of all your abilities and restore all your charges.",
+        "additionalDescs": []
+      },
+      "passive": null,
+      "tags": ["Spirit Resist", "Bullet Resist", "Active"]
+    }
+  ]
+}

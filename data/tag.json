@@ -5,6 +5,7 @@
     "Bullet Velocity",
     "Fire Rate",
     "Headshot",
+    "Reload",
     "Reload Time"
   ],
   "vitalityTags": [
@@ -53,6 +54,7 @@
     "Disarm",
     "Fire Rate Slow",
     "Healing Reduction",
+    "Interrupt",
     "Movement Slow",
     "Silence",
     "Sleep",

@@ -1,4 +1,5 @@
 import {
+  SpiritItemDataTable,
   VitalityItemDataTable,
   WeaponItemDataTable,
 } from '@/components/data-table';
@@ -37,6 +38,22 @@ export default function Items() {
         `}
       >
         <VitalityItemDataTable />
+      </div>
+      <div
+        className={`
+          container
+          rounded-md
+          p-4
+          mb-5
+          min-w-fit
+          bg-spirit/10
+          outline
+          outline-1
+          outline-spirit
+          outline-offset-2
+        `}
+      >
+        <SpiritItemDataTable />
       </div>
     </div>
   );

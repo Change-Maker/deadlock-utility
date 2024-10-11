@@ -13,6 +13,7 @@ import Image from 'next/image';
 import tagJson from '@/data/tag.json';
 import weaponItemJson from '@/data/weapon-item.json';
 import vitalityItemJson from '@/data/vitality-item.json';
+import spiritItemJson from '@/data/spirit-item.json';
 import { ItemData } from '@/types/item-type';
 import TableMeta from '@/types/table-meta-type';
 
@@ -188,6 +189,7 @@ const columns = [
               break;
             }
             case 'spirit': {
+              itemJson = spiritItemJson;
               break;
             }
             default: {
@@ -303,5 +305,17 @@ export function VitalityItemDataTable() {
 }
 
 export function SpiritItemDataTable() {
+  const data = useMemo(() => spiritItemJson.items, []);
+  const table = useReactTable({
+    columns,
+    data,
+    getCoreRowModel: getCoreRowModel(),
+    meta: {
+      category: spiritItemJson.category,
+    },
+  });
 
+  return (
+    <ItemDataTable table={table} borderColor="border-spirit/50" />
+  );
 }
